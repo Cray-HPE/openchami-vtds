@@ -1,0 +1,4 @@
+test_results/*/vtds-build/core/modules
+test_results/*/vtds-build/core/venv
+test_results/*/vtds-build/core/configs/git
+test_results/*/vtds-build/provider/terragrunt

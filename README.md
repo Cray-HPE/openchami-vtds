@@ -1,5 +1,12 @@
-# OpenCHAMI vTDS Environments
+# OpenCHAMI vTDS Integration Testing
 
-This repository is used by automation to manage the creation and destruction of vTDS environments.
+This repository both drives integration testing of OpenCHAMI using GitHub actions and vTDS, and contains the infrastructure used to do that. It also monitors and manages, through github actions, the resources used for integration testing.
 
-**Note: This repository is managed by automation. This is not a place of honor. You probably don't need to change anything here.**
+The repository is split into three general areas:
+
+- Test results, in the `test_results` directory tree
+- Infrastructure (scripts and other files needed for testing) in the `infrastructure` directory tree.
+- Github actions in the `.github` directory tree
+
+The `test_results` directory is automatically populated and should not need to be modified by developers. The `infrastructure` and `.github` directories contain developer modifiable code and data.
+
