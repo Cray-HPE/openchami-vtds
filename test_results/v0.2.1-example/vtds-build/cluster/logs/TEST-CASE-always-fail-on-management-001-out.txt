@@ -1,0 +1,6 @@
+Last login: Mon Mar 30 12:29:39 CDT 2026
+TEST_NAME: always-fail
+TEST_DESCRIPTION: A test that always fails for use in testing the testing mechanisms 
+TEST_ENTRYPOINT: /home/rocky/cluster_tests/always_fail/entrypoint.sh
+TEST_RESULT: FAILURE
+======== Test Output ========
