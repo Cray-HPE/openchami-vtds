@@ -46,6 +46,8 @@ gcloud secrets versions access latest \
 git clone "${TEST_REPO_URL}" "${TEST_REPO_TREE}"
 
 # Build the Podman container image and start the tests in it
+cd "${TEST_REPO_TREE}" # !!! REMOVE THIS LINE BEFORE MERGING !!!
+git checkout VSHA-712  # !!! REMOVE THIS LINE BEFORE MERGING !!!
 cd "${INFRASTRUCTURE_PATH}"
 
 # First clean up any images that have not been used in the past 24

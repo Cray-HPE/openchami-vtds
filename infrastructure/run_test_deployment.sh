@@ -149,6 +149,7 @@ git clone "${TEST_REPO_URL}" "${TEST_REPO_TREE}"
 cd "${TEST_REPO_TREE}"
 git config --global user.email "eric.lund@hpe.com"
 git config --global user.name "OpenCHAMI Tester"
+git checkout VSHA-712 # !!! REMOVE THIS LINE BEFORE MERGING !!!
 git checkout -b "${TEST_RUN_BRANCH}"
 git push --set-upstream origin "${TEST_RUN_BRANCH}"
 mkdir "${TEST_DIR_PATH}"
