@@ -20,3 +20,57 @@
 # OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
 # ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 # OTHER DEALINGS IN THE SOFTWARE.
+
+function image_tag() {
+    echo "${OPENCHAMI_VERSION}" | md5sum | cut -c 1-10
+}
+
+: "${TEST_REPO_URL:="git@github.com:Cray-HPE/openchami-vtds.git"}"
+: "${TEST_REPO_TREE:="$(pwd)/openchami-vtds"}"
+: "${GITHUB_KEY_SECRET_NAME:="github-deploy-key"}"
+: "${OPENCHAMI_VERSION:="main"}"  # This should be in the environment
+: "${CONTAINER_IMAGE_TAG:="$(image_tag)"}"
+export OPENCHAMI_VERSION
+
+INFRASTRUCTURE_PATH="${TEST_REPO_TREE}/infrastructure"
+
+# Set up keys for access to the GitHub test repository
+mkdir -p ~/.ssh
+touch ~/.ssh/id_rsa
+chmod 600 ~/.ssh/id_rsa
+gcloud secrets versions access latest \
+       --secret="github-deploy-key" > ~/.ssh/id_rsa
+
+# Clone the repository so we have access to the infrastructure needed
+# to start testing
+git clone "${TEST_REPO_URL}" "${TEST_REPO_TREE}"
+
+# Build the Podman container image and start the tests in it
+cd "${INFRASTRUCTURE_PATH}"
+
+# First clean up any images that have not been used in the past 24
+# hours so we keep things resonably tidy
+podman images prune -a --filter "until=24h"
+
+# Now create our image
+podman build -t "openchami-tester:${CONTAINER_IMAGE_TAG}" .
+podman run \
+       -e OPENCHAMI_VERSION \
+       -e TEST_TIMESTAMP \
+       -e TEST_REPO_URL \
+       -e TEST_REPO_TREE \
+       -e OPENCHAMI_VERSION \
+       -e TEST_RUN_NAME \
+       -e TEST_CLUSTER_NAME \
+       -e TEST_UPDATE_INTERVAL \
+       -e TEST_DEPLOY_TIMEOUT \
+       -e TEST_REMOVE_TIMEOUT \
+       -e VTDS_CONFIG_TEMPLATE \
+       -e GITHUB_KEY_SECRET_NAME \
+       -d "openchami-tester:${CONTAINER_IMAGE_TAG}"
+
+# Clean up...
+rm -rf "${TEST_REPO_TREE}"
+
+# The test is now running so we are done
+exit 0

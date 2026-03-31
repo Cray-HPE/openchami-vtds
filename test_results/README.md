@@ -125,11 +125,14 @@ the removal succeeded, so the `REMOVED` state is recorded followed by a
 `COMPLETE` state indicating that the deployment and testing are no
 longer running.
 
-If deployment fails, the next state recorded is `DEPLOY_FAILED` instead of
-`DEPLOYED` indicating that the deployment failed. Removal will still be
-attempted after a deployment fails. If removal fails, either after a
-successful or failed deployment, the state following `REMOVING` will be
-`REMOVE_FAILED`.
+If deployment fails, the next state recorded is `DEPLOY_FAILED`
+instead of `DEPLOYED` indicating that the deployment failed. Removal
+will still be attempted after a deployment fails. If removal fails,
+either after a successful or failed deployment, the state following
+`REMOVING` will be `REMOVE_FAILED`. If deployment times out a state of
+`DEPLOY_TIMED_OUT` will be recorded in addition to
+`DEPLOY_FAILED`. Similarly, if removal times out a state of
+`REMOVE_TIMED_OUT` will be recorded in addition to `REMOVE_FAILED`.
 
 If the mechanism that reports these status updates itself fails, the
 `status` file will not reach a `COMPLETE` state, and the time stamps
