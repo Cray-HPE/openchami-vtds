@@ -141,3 +141,4 @@ INFO: TESTING: skipping test case 'always-fail' because it is disabled
 INFO: TESTING: skipping test case 'always-pass' because it is disabled
 INFO: TESTING: skipping test case 'always-time-out' because it is disabled
 
+running terragrunt 'destroy'[remove] in '/vtds/openchami-vtds/test_results/v0.1.2-260402130512/vtds-build/provider/terragrunt' ..........................................................
