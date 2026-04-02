@@ -1,0 +1,71 @@
+++++++++ vtds-build/cluster/logs/TEST-CASE-always-fail-on-management-001-out.txt ++++++++
+TEST_NAME: always-fail
+TEST_DESCRIPTION: A test that always fails for use in testing the testing mechanisms 
+TEST_ENTRYPOINT: /home/rocky/cluster_tests/always_fail/entrypoint.sh
+TEST_RESULT: FAILURE
+======== Test Output ========
+++++++++ vtds-build/cluster/logs/TEST-CASE-always-pass-on-management-001-out.txt ++++++++
+TEST_NAME: always-pass
+TEST_DESCRIPTION: A test that always passes for use in testing the testing mechanisms 
+TEST_ENTRYPOINT: /home/rocky/cluster_tests/always_pass/entrypoint.sh
+TEST_RESULT: SUCCESS
+======== Test Output ========
+++++++++ vtds-build/cluster/logs/TEST-CASE-always-time-out-on-management-001-out.txt ++++++++
+TEST_NAME: always-time-out
+TEST_DESCRIPTION: A test that always times out for testing the test timeout  mechanism 
+TEST_ENTRYPOINT: /home/rocky/cluster_tests/always_time_out/entrypoint.sh
+TEST_RESULT: FAILURE
+TEST_TIMEOUT: 'always-time-out' timed out after 2 seconds
+======== Test Output ========
+++++++++ vtds-build/cluster/logs/TEST-CASE-compute-node-ssh-on-management-001-out.txt ++++++++
+TEST_NAME: compute-node-ssh
+TEST_DESCRIPTION: A simple test that waits for the compute nodes configured within the OpenCHAMI cluster to become available and then verifies that each one can be reached from the rocky user on the management (head) node using SSH. 
+TEST_ENTRYPOINT: /home/rocky/cluster_tests/compute_node_ssh/entrypoint.sh
+TEST_RESULT: SUCCESS
+======== Test Output ========
+Attempting to SSH to nid-001.ssh: connect to host nid-001 port 22: Connection refused
+.ssh: connect to host nid-001 port 22: Connection refused
+.ssh: connect to host nid-001 port 22: Connection refused
+.ssh: connect to host nid-001 port 22: Connection refused
+.ssh: connect to host nid-001 port 22: Connection refused
+.ssh: connect to host nid-001 port 22: Connection refused
+.ssh: connect to host nid-001 port 22: Connection refused
+.ssh: connect to host nid-001 port 22: Connection refused
+.ssh: connect to host nid-001 port 22: Connection refused
+.ssh: connect to host nid-001 port 22: Connection refused
+.ssh: connect to host nid-001 port 22: Connection refused
+.ssh: connect to host nid-001 port 22: Connection refused
+.ssh: connect to host nid-001 port 22: Connection refused
+.ssh: connect to host nid-001 port 22: Connection refused
+.Warning: Permanently added 'nid-001' (ED25519) to the list of known hosts.
+Attempting to SSH to nid-002.ssh: connect to host nid-002 port 22: Connection refused
+.ssh: connect to host nid-002 port 22: Connection refused
+.Warning: Permanently added 'nid-002' (ED25519) to the list of known hosts.
+Attempting to SSH to nid-003.ssh: connect to host nid-003 port 22: Connection refused
+.ssh: connect to host nid-003 port 22: Connection refused
+.Warning: Permanently added 'nid-003' (ED25519) to the list of known hosts.
+Attempting to SSH to nid-004.ssh: connect to host nid-004 port 22: Connection refused
+.ssh: connect to host nid-004 port 22: Connection refused
+.Warning: Permanently added 'nid-004' (ED25519) to the list of known hosts.
+++++++++ vtds-build/cluster/logs/TEST-CASE-deep-dependency-disabled-test-on-management-001-out.txt ++++++++
+TEST_NAME: deep-dependency-disabled-test
+TEST_DESCRIPTION: A test that depends on a test whose dependency is disabled 
+TEST_ENTRYPOINT: /home/rocky/cluster_tests/always_pass/entrypoint.sh
+TEST_RESULT: SUCCESS
+======== Test Output ========
+++++++++ vtds-build/cluster/logs/TEST-CASE-deep-dependency-fail-test-on-management-001-out.txt ++++++++
+TEST_NAME: deep-dependency-fail-test
+TEST_DESCRIPTION: A test that depends on a test whose dependency is disabled 
+TEST_RESULT: SUPPRESSED
+TEST_DEPENDENCIES_FAILED: dependency-fail-test
+++++++++ vtds-build/cluster/logs/TEST-CASE-dependency-disabled-test-on-management-001-out.txt ++++++++
+TEST_NAME: dependency-disabled-test
+TEST_DESCRIPTION: A test that depends on a disabled test 
+TEST_ENTRYPOINT: /home/rocky/cluster_tests/always_pass/entrypoint.sh
+TEST_RESULT: SUCCESS
+======== Test Output ========
+++++++++ vtds-build/cluster/logs/TEST-CASE-dependency-fail-test-on-management-001-out.txt ++++++++
+TEST_NAME: dependency-fail-test
+TEST_DESCRIPTION: A test that depends on a disabled test 
+TEST_RESULT: SUPPRESSED
+TEST_DEPENDENCIES_FAILED: always-fail
