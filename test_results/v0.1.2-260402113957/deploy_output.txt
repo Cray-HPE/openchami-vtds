@@ -196,3 +196,4 @@ INFO: waiting for popen: subproc='<Popen: returncode: None args: ['ssh', '-i', '
 INFO: TESTING: suppressing test due to failed dependencies 'deep-dependency-fail-test'
 INFO: waiting for popen: subproc='<Popen: returncode: None args: ['ssh', '-i', '/vtds/openchami-vtds/test_resu...>', cmd='su - rocky ~rocky/cluster_tests/suppressed_test.sh deep-dependency-fail-test 'A test that depends on a test whose dependency is disabled ' dependency-fail-test', logpaths='('/vtds/openchami-vtds/test_results/v0.1.2-260402113957/vtds-build/cluster/logs/TEST-CASE-deep-dependency-fail-test-on-management-001-out.txt', '/vtds/openchami-vtds/test_results/v0.1.2-260402113957/vtds-build/cluster/logs/TEST-CASE-deep-dependency-fail-test-on-management-001-err.txt')', timeout='None', kwargs='{}'
 
+running terragrunt 'destroy'[remove] in '/vtds/openchami-vtds/test_results/v0.1.2-260402113957/vtds-build/provider/terragrunt' ..........................................................
