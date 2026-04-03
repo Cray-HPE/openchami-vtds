@@ -159,9 +159,6 @@ cp "${TEST_REPO_TREE}/infrastructure/${VTDS_CONFIG_TEMPLATE}" \
 cd "${TEST_DIR_PATH}"
 touch "${TEST_DIR_PATH}/status"
 touch "${TEST_DIR_PATH}/deploy_output.txt"
-vtds show_config > full_config.yaml
-git add vtds-build
-git add full_config.yaml
 git add status
 git add deploy_output.txt
 git add config.yaml
@@ -173,6 +170,14 @@ sed -i \
     -e "s/%%OPENCHAMI_VERSION%%/${OPENCHAMI_VERSION}/g" \
     "${TEST_DIR_PATH}"/config.yaml
 git commit -a -m "Test run ${TEST_RUN_NAME} configured"
+
+# Capture the status and start capturing the deployment logs and data
+# in case something fails badly.
+vtds show_config | \
+    sed -e 's/redfish_password: .*$/redfish_password: null # Removed/' > \
+    full_config.yaml
+git add vtds-build
+git add full_config.yaml
 
 # Start the deployment in the background and start waiting for it
 run_monitored \
