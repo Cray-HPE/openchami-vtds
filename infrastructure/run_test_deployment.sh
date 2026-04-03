@@ -151,6 +151,7 @@ git clone "${TEST_REPO_URL}" "${TEST_REPO_TREE}"
 cd "${TEST_REPO_TREE}"
 git config --global user.email "${GITHUB_EMAIL}"
 git config --global user.name "${GITHUB_USER}"
+git checkout VSHA-712-deploy  # DON'T MERGE THIS BRANCH!
 git checkout -b "${TEST_RUN_BRANCH}"
 git push --set-upstream origin "${TEST_RUN_BRANCH}"
 mkdir "${TEST_DIR_PATH}"

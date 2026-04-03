@@ -44,6 +44,8 @@ gcloud secrets versions access latest \
 # Clone the repository so we have access to the infrastructure needed
 # to start testing
 git clone "${TEST_REPO_URL}" "${TEST_REPO_TREE}"
+cd "${TEST_REPO_TREE}"  # DON'T MERGE THIS BRANCH!
+git checkout VSHA-712-deploy  # DON'T MERGE THIS BRANCH!
 
 # Build the Podman container image and start the tests in it
 cd "${INFRASTRUCTURE_PATH}"
