@@ -1,0 +1,92 @@
+Importing GPG key 0x350D275D:
+ Userid     : "Rocky Enterprise Software Foundation - Release key 2022 <releng@rockylinux.org>"
+ Fingerprint: 21CB 256A E16F C54C 6E65 2949 702D 426D 350D 275D
+ From       : /etc/pki/rpm-gpg/RPM-GPG-KEY-Rocky-9
+Importing GPG key 0x3228467C:
+ Userid     : "Fedora (epel9) <epel@fedoraproject.org>"
+ Fingerprint: FF8A D134 4597 106E CE81 3B91 8A38 72BF 3228 467C
+ From       : /etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-9
+Cloning into 'openchami_release'...
+Already on 'main'
++ umask 022
++ cd /home/rocky/rpmbuild/BUILD
++ cd /home/rocky/rpmbuild/BUILD
++ rm -rf openchami-0.1.2
++ /usr/bin/gzip -dc /home/rocky/rpmbuild/SOURCES/openchami-0.1.2.tar.gz
++ /usr/bin/tar -xof -
++ STATUS=0
++ '[' 0 -ne 0 ']'
++ cd openchami-0.1.2
++ /usr/bin/chmod -Rf a+rX,u+w,g-w,o-w .
++ RPM_EC=0
+++ jobs -p
++ exit 0
++ umask 022
++ cd /home/rocky/rpmbuild/BUILD
++ cd openchami-0.1.2
++ RPM_EC=0
+++ jobs -p
++ exit 0
++ umask 022
++ cd /home/rocky/rpmbuild/BUILD
++ '[' /home/rocky/rpmbuild/BUILDROOT/openchami-0.1.2-1.x86_64 '!=' / ']'
++ rm -rf /home/rocky/rpmbuild/BUILDROOT/openchami-0.1.2-1.x86_64
+++ dirname /home/rocky/rpmbuild/BUILDROOT/openchami-0.1.2-1.x86_64
++ mkdir -p /home/rocky/rpmbuild/BUILDROOT
++ mkdir /home/rocky/rpmbuild/BUILDROOT/openchami-0.1.2-1.x86_64
++ cd openchami-0.1.2
++ mkdir -p /home/rocky/rpmbuild/BUILDROOT/openchami-0.1.2-1.x86_64/etc/openchami/configs /home/rocky/rpmbuild/BUILDROOT/openchami-0.1.2-1.x86_64/etc/openchami/pg-init /home/rocky/rpmbuild/BUILDROOT/openchami-0.1.2-1.x86_64/etc/containers/systemd /home/rocky/rpmbuild/BUILDROOT/openchami-0.1.2-1.x86_64/etc/systemd/system /home/rocky/rpmbuild/BUILDROOT/openchami-0.1.2-1.x86_64/usr/bin /home/rocky/rpmbuild/BUILDROOT/openchami-0.1.2-1.x86_64/etc/profile.d /home/rocky/rpmbuild/BUILDROOT/openchami-0.1.2-1.x86_64/usr/libexec/openchami
++ cp -r systemd/configs/Corefile systemd/configs/configurator.yaml systemd/configs/coredhcp.yaml systemd/configs/haproxy.cfg systemd/configs/hydra.yml systemd/configs/opaal.yaml systemd/configs/openchami.env /home/rocky/rpmbuild/BUILDROOT/openchami-0.1.2-1.x86_64/etc/openchami/configs/
++ cp -r systemd/containers/acme-deploy.container systemd/containers/acme-register.container systemd/containers/bss-init.container systemd/containers/bss.container systemd/containers/cloud-init-server.container systemd/containers/coresmd-coredhcp.container systemd/containers/coresmd-coredns.container systemd/containers/haproxy.container systemd/containers/hydra-gen-jwks.container systemd/containers/hydra-migrate.container systemd/containers/hydra.container systemd/containers/opaal-idp.container systemd/containers/opaal.container systemd/containers/postgres.container systemd/containers/smd-init.container systemd/containers/smd.container systemd/containers/step-ca.container /home/rocky/rpmbuild/BUILDROOT/openchami-0.1.2-1.x86_64/etc/containers/systemd/
++ cp -r systemd/volumes/acme-certs.volume systemd/volumes/cloud-init-data.volume systemd/volumes/haproxy-certs.volume systemd/volumes/postgres-data.volume systemd/volumes/step-ca-db.volume systemd/volumes/step-ca-home.volume systemd/volumes/step-root-ca.volume /home/rocky/rpmbuild/BUILDROOT/openchami-0.1.2-1.x86_64/etc/containers/systemd/
++ cp -r systemd/networks/openchami-cert-internal.network systemd/networks/openchami-external.network systemd/networks/openchami-internal.network systemd/networks/openchami-jwt-internal.network /home/rocky/rpmbuild/BUILDROOT/openchami-0.1.2-1.x86_64/etc/containers/systemd/
++ cp -r systemd/targets/openchami.target /home/rocky/rpmbuild/BUILDROOT/openchami-0.1.2-1.x86_64/etc/systemd/system/
++ cp -r systemd/system/openchami-cert-renewal.service systemd/system/openchami-cert-renewal.timer systemd/system/openchami-cert-trust.service /home/rocky/rpmbuild/BUILDROOT/openchami-0.1.2-1.x86_64/etc/systemd/system/
++ cp scripts/bootstrap_openchami.sh /home/rocky/rpmbuild/BUILDROOT/openchami-0.1.2-1.x86_64/usr/libexec/openchami/
++ cp scripts/openchami-certificate-update /home/rocky/rpmbuild/BUILDROOT/openchami-0.1.2-1.x86_64/usr/bin/
++ cp scripts/openchami_profile.sh /home/rocky/rpmbuild/BUILDROOT/openchami-0.1.2-1.x86_64/etc/profile.d/openchami.sh
++ cp scripts/multi-psql-db.sh /home/rocky/rpmbuild/BUILDROOT/openchami-0.1.2-1.x86_64/etc/openchami/pg-init/multi-psql-db.sh
++ cp scripts/ohpc-nodes.sh /home/rocky/rpmbuild/BUILDROOT/openchami-0.1.2-1.x86_64/usr/libexec/openchami/
++ chmod +x /home/rocky/rpmbuild/BUILDROOT/openchami-0.1.2-1.x86_64/usr/libexec/openchami/bootstrap_openchami.sh
++ chmod +x /home/rocky/rpmbuild/BUILDROOT/openchami-0.1.2-1.x86_64/usr/libexec/openchami/ohpc-nodes.sh
++ chmod +x /home/rocky/rpmbuild/BUILDROOT/openchami-0.1.2-1.x86_64/usr/libexec/openchami/bootstrap_openchami.sh
++ chmod +x /home/rocky/rpmbuild/BUILDROOT/openchami-0.1.2-1.x86_64/usr/bin/openchami-certificate-update
++ chmod +x /home/rocky/rpmbuild/BUILDROOT/openchami-0.1.2-1.x86_64/usr/libexec/openchami/ohpc-nodes.sh
++ chmod 600 /home/rocky/rpmbuild/BUILDROOT/openchami-0.1.2-1.x86_64/etc/openchami/configs/openchami.env
++ chmod 644 /home/rocky/rpmbuild/BUILDROOT/openchami-0.1.2-1.x86_64/etc/openchami/configs/Corefile /home/rocky/rpmbuild/BUILDROOT/openchami-0.1.2-1.x86_64/etc/openchami/configs/configurator.yaml /home/rocky/rpmbuild/BUILDROOT/openchami-0.1.2-1.x86_64/etc/openchami/configs/coredhcp.yaml /home/rocky/rpmbuild/BUILDROOT/openchami-0.1.2-1.x86_64/etc/openchami/configs/haproxy.cfg /home/rocky/rpmbuild/BUILDROOT/openchami-0.1.2-1.x86_64/etc/openchami/configs/hydra.yml /home/rocky/rpmbuild/BUILDROOT/openchami-0.1.2-1.x86_64/etc/openchami/configs/opaal.yaml /home/rocky/rpmbuild/BUILDROOT/openchami-0.1.2-1.x86_64/etc/openchami/configs/openchami.env
++ /usr/bin/find-debuginfo -j4 --strict-build-id -m -i --build-id-seed 0.1.2-1 --unique-debug-suffix -0.1.2-1.x86_64 --unique-debug-src-base openchami-0.1.2-1.x86_64 --run-dwz --dwz-low-mem-die-limit 10000000 --dwz-max-die-limit 110000000 --remove-section .gnu.build.attributes -S debugsourcefiles.list /home/rocky/rpmbuild/BUILD/openchami-0.1.2
++ '[' '%{buildarch}' = noarch ']'
++ QA_CHECK_RPATHS=1
++ case "${QA_CHECK_RPATHS:-}" in
++ /usr/lib/rpm/check-rpaths
++ /usr/lib/rpm/check-buildroot
++ /usr/lib/rpm/redhat/brp-ldconfig
++ /usr/lib/rpm/brp-compress
++ /usr/lib/rpm/redhat/brp-strip-lto /usr/bin/strip
++ /usr/lib/rpm/brp-strip-static-archive /usr/bin/strip
++ /usr/lib/rpm/redhat/brp-python-bytecompile '' 1 0
++ /usr/lib/rpm/brp-python-hardlink
++ /usr/lib/rpm/redhat/brp-mangle-shebangs
++ umask 022
++ cd /home/rocky/rpmbuild/BUILD
++ cd openchami-0.1.2
++ LICENSEDIR=/home/rocky/rpmbuild/BUILDROOT/openchami-0.1.2-1.x86_64/usr/share/licenses/openchami
++ export LC_ALL=C
++ LC_ALL=C
++ export LICENSEDIR
++ /usr/bin/mkdir -p /home/rocky/rpmbuild/BUILDROOT/openchami-0.1.2-1.x86_64/usr/share/licenses/openchami
++ cp -pr LICENSE /home/rocky/rpmbuild/BUILDROOT/openchami-0.1.2-1.x86_64/usr/share/licenses/openchami
++ RPM_EC=0
+++ jobs -p
++ exit 0
++ umask 022
++ cd /home/rocky/rpmbuild/BUILD
++ cd openchami-0.1.2
++ /usr/bin/rm -rf /home/rocky/rpmbuild/BUILDROOT/openchami-0.1.2-1.x86_64
++ RPM_EC=0
+++ jobs -p
++ exit 0
+Unit openchami.target could not be found.
+A dependency job for openchami.target failed. See 'journalctl -xe' for details.
+exiting on error [1] from /home/rocky/OpenCHAMI-Prepare.sh:158
+exiting on error [1] from /root/prepare_node.sh:142
