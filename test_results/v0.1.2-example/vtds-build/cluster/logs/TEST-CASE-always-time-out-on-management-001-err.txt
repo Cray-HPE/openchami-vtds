@@ -1,0 +1,1 @@
+exiting on error [124] from /home/rocky/cluster_tests/driver.sh:74

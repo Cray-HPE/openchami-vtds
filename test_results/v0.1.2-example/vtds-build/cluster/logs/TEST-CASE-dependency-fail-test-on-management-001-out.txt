@@ -1,0 +1,5 @@
+Last login: Mon Mar 30 12:29:39 CDT 2026
+TEST_NAME: dependency-fail-test
+TEST_DESCRIPTION: A test that depends on a disabled test 
+TEST_RESULT: SUPPRESSED
+TEST_DEPENDENCIES_FAILED: always-fail
