@@ -7,4 +7,5 @@ jobs:
     steps:
       - uses: 'google-github-actions/auth@v3'
         with:
+          project_id: hpe-openchami-tester
           credentials_json: '${{ secrets.GOOGLE_CREDS }}'
