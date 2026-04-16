@@ -1,6 +1,6 @@
 name: vTDS
 run-name: Run vTDS tests
-on: [push]
+on: [push, pull_request]
 jobs:
   vTDS:
     runs-on: ubuntu-latest
