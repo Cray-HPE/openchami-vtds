@@ -15,5 +15,5 @@ jobs:
         with:
           # Pinned versions prevent surprises.
           version: "565.0.0"
-      - name: 'gcloud info'
-        run: 'gcloud info'
+      - name: 'SSH'
+        run: 'gcloud compute ssh testbuilder@openchami-tester-001 --project=hpe-openchami-tester --zone=us-central1-a --command="uname -a"'
