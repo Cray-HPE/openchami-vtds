@@ -11,3 +11,9 @@ jobs:
         with:
           project_id: hpe-openchami-tester
           credentials_json: '${{ secrets.GOOGLE_CREDS }}'
+      - uses: 'google-github-actions/setup-gcloud@v3'
+        with:
+          # Pinned versions prevent surprises.
+          version: "565.0.0"
+      - name: 'gcloud info'
+        run: 'gcloud info'
