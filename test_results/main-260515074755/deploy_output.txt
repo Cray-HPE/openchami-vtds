@@ -1,0 +1,4 @@
+running terragrunt 'plan'[validate] in '/vtds/openchami-vtds/test_results/main-260515074755/vtds-build/provider/terragrunt' ..............
+running terragrunt 'apply'[deploy] in '/vtds/openchami-vtds/test_results/main-260515074755/vtds-build/provider/terragrunt' .....................ERROR: terragrunt 'apply' operation failed [standard output log in: '/vtds/openchami-vtds/test_results/main-260515074755/vtds-build/provider/logs/terragrunt_apply[deploy]-out.txt', standard error log in: '/vtds/openchami-vtds/test_results/main-260515074755/vtds-build/provider/logs/terragrunt_apply[deploy]-err.txt']
+
+ERROR: execution in virtual environment failed - Command '['/vtds/openchami-vtds/test_results/main-260515074755/vtds-build/core/venv/bin/python3', '-m', 'vtds_core.private.deploy', '--build-dir=/vtds/openchami-vtds/test_results/main-260515074755/vtds-build', '--core-config=/vtds/openchami-vtds/test_results/main-260515074755/config.yaml']' returned non-zero exit status 1.
