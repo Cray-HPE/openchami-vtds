@@ -1,0 +1,1308 @@
+[90m07:50:01.419 [0m[32mINFO   [0mTerragrunt Cache server is listening on 127.0.0.1:43395
+[90m07:50:01.419 [0m[32mINFO   [0mStart Terragrunt Cache server
+[90m07:50:02.315 [0m[32mINFO   [0mThe stack at . will be processed in the following order for command apply:
+Group 1
+- Module ./system/project/deploy
+
+Group 2
+- Module ./system/platform/blade-interconnect/blade-interconnect/vpc/deploy
+- Module ./system/platform/virtual-blade/compute-blade/service-account/deploy
+- Module ./system/platform/virtual-blade/host-blade/service-account/deploy
+
+Group 3
+- Module ./system/platform/blade-interconnect/blade-interconnect/firewall/deploy
+- Module ./system/platform/blade-interconnect/blade-interconnect/routes/deploy
+- Module ./system/platform/blade-interconnect/blade-interconnect/subnet/deploy
+- Module ./system/platform/virtual-blade/compute-blade/service-account/iam/billing/deploy
+- Module ./system/platform/virtual-blade/compute-blade/service-account/iam/cluster_project/deploy
+- Module ./system/platform/virtual-blade/compute-blade/service-account/iam/clusters_folder/deploy
+- Module ./system/platform/virtual-blade/compute-blade/service-account/iam/image-source/deploy
+- Module ./system/platform/virtual-blade/compute-blade/service-account/iam/organization/deploy
+- Module ./system/platform/virtual-blade/compute-blade/service-account/iam/seed_project/deploy
+- Module ./system/platform/virtual-blade/host-blade/service-account/iam/billing/deploy
+- Module ./system/platform/virtual-blade/host-blade/service-account/iam/cluster_project/deploy
+- Module ./system/platform/virtual-blade/host-blade/service-account/iam/clusters_folder/deploy
+- Module ./system/platform/virtual-blade/host-blade/service-account/iam/image-source/deploy
+- Module ./system/platform/virtual-blade/host-blade/service-account/iam/organization/deploy
+- Module ./system/platform/virtual-blade/host-blade/service-account/iam/seed_project/deploy
+
+Group 4
+- Module ./system/platform/virtual-blade/compute-blade/instance-template/deploy
+- Module ./system/platform/virtual-blade/host-blade/instance-template/deploy
+
+Group 5
+- Module ./system/platform/virtual-blade/compute-blade/compute_instance/deploy
+- Module ./system/platform/virtual-blade/host-blade/compute_instance/deploy
+
+
+[90m07:50:06.002 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m[0m[1mmodule.gsuite_group.data.google_organization.org[0]: Reading...[0m[0m[0m
+[90m07:50:06.061 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m[0m[1mmodule.gsuite_group.data.google_organization.org[0]: Read complete after 0s [id=organizations/980209705768][0m[0m
+[90m07:50:06.212 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0mTerraform used the selected providers to generate the following execution
+[90m07:50:06.212 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0mplan. Resource actions are indicated with the following symbols:
+[90m07:50:06.212 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m  [32m+[0m create[0m[0m
+[90m07:50:06.212 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0mTerraform will perform the following actions:
+[90m07:50:06.212 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m[1m  # module.project-factory.google_project.main[0m will be created[0m
+[90m07:50:06.212 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m[0m  [32m+[0m[0m resource "google_project" "main" {[0m
+[90m07:50:06.212 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m      [32m+[0m[0m auto_create_network = false[0m
+[90m07:50:06.212 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m      [32m+[0m[0m billing_account     = "01C2AB-21F156-585470"[0m
+[90m07:50:06.212 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m      [32m+[0m[0m deletion_policy     = "DELETE"[0m
+[90m07:50:06.212 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m      [32m+[0m[0m effective_labels    = {[0m
+[90m07:50:06.212 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m          [32m+[0m[0m "contact"                    = "vtds-team"[0m
+[90m07:50:06.212 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m          [32m+[0m[0m "goog-terraform-provisioned" = "true"[0m
+[90m07:50:06.212 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m          [32m+[0m[0m "role"                       = "vtds-support"[0m
+[90m07:50:06.212 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m          [32m+[0m[0m "team"                       = "vtds"[0m
+[90m07:50:06.212 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m          [32m+[0m[0m "terraform"                  = "true"[0m
+[90m07:50:06.212 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m        }
+[90m07:50:06.212 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m      [32m+[0m[0m folder_id           = "525773635451"[0m
+[90m07:50:06.212 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m      [32m+[0m[0m id                  = (known after apply)[0m
+[90m07:50:06.212 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m      [32m+[0m[0m labels              = {[0m
+[90m07:50:06.213 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m          [32m+[0m[0m "contact"   = "vtds-team"[0m
+[90m07:50:06.213 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m          [32m+[0m[0m "role"      = "vtds-support"[0m
+[90m07:50:06.213 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m          [32m+[0m[0m "team"      = "vtds"[0m
+[90m07:50:06.213 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m          [32m+[0m[0m "terraform" = "true"[0m
+[90m07:50:06.213 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m        }
+[90m07:50:06.213 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m      [32m+[0m[0m name                = "hpe-ochamitest-92578414be"[0m
+[90m07:50:06.213 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m      [32m+[0m[0m number              = (known after apply)[0m
+[90m07:50:06.213 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m      [32m+[0m[0m project_id          = (known after apply)[0m
+[90m07:50:06.213 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m      [32m+[0m[0m terraform_labels    = {[0m
+[90m07:50:06.213 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m          [32m+[0m[0m "contact"                    = "vtds-team"[0m
+[90m07:50:06.213 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m          [32m+[0m[0m "goog-terraform-provisioned" = "true"[0m
+[90m07:50:06.213 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m          [32m+[0m[0m "role"                       = "vtds-support"[0m
+[90m07:50:06.213 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m          [32m+[0m[0m "team"                       = "vtds"[0m
+[90m07:50:06.213 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m          [32m+[0m[0m "terraform"                  = "true"[0m
+[90m07:50:06.213 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m        }
+[90m07:50:06.213 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m    }
+[90m07:50:06.213 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m[1m  # module.project-factory.google_project_default_service_accounts.default_service_accounts[0][0m will be created[0m
+[90m07:50:06.213 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m[0m  [32m+[0m[0m resource "google_project_default_service_accounts" "default_service_accounts" {[0m
+[90m07:50:06.213 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m      [32m+[0m[0m action           = "DISABLE"[0m
+[90m07:50:06.213 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m      [32m+[0m[0m id               = (known after apply)[0m
+[90m07:50:06.213 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m      [32m+[0m[0m project          = (known after apply)[0m
+[90m07:50:06.213 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m      [32m+[0m[0m restore_policy   = "REVERT_AND_IGNORE_FAILURE"[0m
+[90m07:50:06.213 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m      [32m+[0m[0m service_accounts = (known after apply)[0m
+[90m07:50:06.213 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m    }
+[90m07:50:06.213 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m[1m  # module.project-factory.google_project_iam_member.gsuite_group_role[0][0m will be created[0m
+[90m07:50:06.214 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m[0m  [32m+[0m[0m resource "google_project_iam_member" "gsuite_group_role" {[0m
+[90m07:50:06.214 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m      [32m+[0m[0m etag    = (known after apply)[0m
+[90m07:50:06.214 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m      [32m+[0m[0m id      = (known after apply)[0m
+[90m07:50:06.214 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m      [32m+[0m[0m member  = "group:vshasta2-owners@algol60.net"[0m
+[90m07:50:06.214 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m      [32m+[0m[0m project = (known after apply)[0m
+[90m07:50:06.214 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m      [32m+[0m[0m role    = "roles/owner"[0m
+[90m07:50:06.214 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m    }
+[90m07:50:06.214 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m[1m  # module.project-factory.google_service_account.default_service_account[0][0m will be created[0m
+[90m07:50:06.214 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m[0m  [32m+[0m[0m resource "google_service_account" "default_service_account" {[0m
+[90m07:50:06.214 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m      [32m+[0m[0m account_id                   = "project-service-account"[0m
+[90m07:50:06.214 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m      [32m+[0m[0m create_ignore_already_exists = true[0m
+[90m07:50:06.214 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m      [32m+[0m[0m disabled                     = false[0m
+[90m07:50:06.214 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m      [32m+[0m[0m display_name                 = "hpe-ochamitest-92578414be Project Service Account"[0m
+[90m07:50:06.214 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m      [32m+[0m[0m email                        = (known after apply)[0m
+[90m07:50:06.214 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m      [32m+[0m[0m id                           = (known after apply)[0m
+[90m07:50:06.214 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m      [32m+[0m[0m member                       = (known after apply)[0m
+[90m07:50:06.214 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m      [32m+[0m[0m name                         = (known after apply)[0m
+[90m07:50:06.214 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m      [32m+[0m[0m project                      = (known after apply)[0m
+[90m07:50:06.214 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m      [32m+[0m[0m unique_id                    = (known after apply)[0m
+[90m07:50:06.214 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m    }
+[90m07:50:06.214 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m[1m  # module.project-factory.google_service_account_iam_member.service_account_grant_to_group[0][0m will be created[0m
+[90m07:50:06.215 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m[0m  [32m+[0m[0m resource "google_service_account_iam_member" "service_account_grant_to_group" {[0m
+[90m07:50:06.215 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m      [32m+[0m[0m etag               = (known after apply)[0m
+[90m07:50:06.215 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m      [32m+[0m[0m id                 = (known after apply)[0m
+[90m07:50:06.215 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m      [32m+[0m[0m member             = "group:vshasta2-owners@algol60.net"[0m
+[90m07:50:06.215 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m      [32m+[0m[0m role               = "roles/iam.serviceAccountUser"[0m
+[90m07:50:06.215 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m      [32m+[0m[0m service_account_id = (known after apply)[0m
+[90m07:50:06.215 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m    }
+[90m07:50:06.215 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m[1m  # module.project-factory.random_id.random_project_id_suffix[0m will be created[0m
+[90m07:50:06.215 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m[0m  [32m+[0m[0m resource "random_id" "random_project_id_suffix" {[0m
+[90m07:50:06.215 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m      [32m+[0m[0m b64_std     = (known after apply)[0m
+[90m07:50:06.215 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m      [32m+[0m[0m b64_url     = (known after apply)[0m
+[90m07:50:06.215 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m      [32m+[0m[0m byte_length = 2[0m
+[90m07:50:06.215 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m      [32m+[0m[0m dec         = (known after apply)[0m
+[90m07:50:06.215 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m      [32m+[0m[0m hex         = (known after apply)[0m
+[90m07:50:06.215 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m      [32m+[0m[0m id          = (known after apply)[0m
+[90m07:50:06.215 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m    }
+[90m07:50:06.215 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m[1m  # module.project-factory.module.project_services.google_project_service.project_services["admin.googleapis.com"][0m will be created[0m
+[90m07:50:06.215 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m[0m  [32m+[0m[0m resource "google_project_service" "project_services" {[0m
+[90m07:50:06.215 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m      [32m+[0m[0m disable_dependent_services = false[0m
+[90m07:50:06.215 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m      [32m+[0m[0m disable_on_destroy         = false[0m
+[90m07:50:06.215 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m      [32m+[0m[0m id                         = (known after apply)[0m
+[90m07:50:06.215 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m      [32m+[0m[0m project                    = (known after apply)[0m
+[90m07:50:06.216 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m      [32m+[0m[0m service                    = "admin.googleapis.com"[0m
+[90m07:50:06.216 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m    }
+[90m07:50:06.216 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m[1m  # module.project-factory.module.project_services.google_project_service.project_services["cloudbilling.googleapis.com"][0m will be created[0m
+[90m07:50:06.216 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m[0m  [32m+[0m[0m resource "google_project_service" "project_services" {[0m
+[90m07:50:06.216 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m      [32m+[0m[0m disable_dependent_services = false[0m
+[90m07:50:06.216 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m      [32m+[0m[0m disable_on_destroy         = false[0m
+[90m07:50:06.216 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m      [32m+[0m[0m id                         = (known after apply)[0m
+[90m07:50:06.216 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m      [32m+[0m[0m project                    = (known after apply)[0m
+[90m07:50:06.216 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m      [32m+[0m[0m service                    = "cloudbilling.googleapis.com"[0m
+[90m07:50:06.216 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m    }
+[90m07:50:06.216 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m[1m  # module.project-factory.module.project_services.google_project_service.project_services["cloudresourcemanager.googleapis.com"][0m will be created[0m
+[90m07:50:06.216 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m[0m  [32m+[0m[0m resource "google_project_service" "project_services" {[0m
+[90m07:50:06.216 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m      [32m+[0m[0m disable_dependent_services = false[0m
+[90m07:50:06.216 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m      [32m+[0m[0m disable_on_destroy         = false[0m
+[90m07:50:06.216 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m      [32m+[0m[0m id                         = (known after apply)[0m
+[90m07:50:06.216 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m      [32m+[0m[0m project                    = (known after apply)[0m
+[90m07:50:06.216 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m      [32m+[0m[0m service                    = "cloudresourcemanager.googleapis.com"[0m
+[90m07:50:06.216 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m    }
+[90m07:50:06.216 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m[1m  # module.project-factory.module.project_services.google_project_service.project_services["compute.googleapis.com"][0m will be created[0m
+[90m07:50:06.216 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m[0m  [32m+[0m[0m resource "google_project_service" "project_services" {[0m
+[90m07:50:06.217 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m      [32m+[0m[0m disable_dependent_services = false[0m
+[90m07:50:06.217 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m      [32m+[0m[0m disable_on_destroy         = false[0m
+[90m07:50:06.217 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m      [32m+[0m[0m id                         = (known after apply)[0m
+[90m07:50:06.217 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m      [32m+[0m[0m project                    = (known after apply)[0m
+[90m07:50:06.217 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m      [32m+[0m[0m service                    = "compute.googleapis.com"[0m
+[90m07:50:06.217 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m    }
+[90m07:50:06.217 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m[1m  # module.project-factory.module.project_services.google_project_service.project_services["iam.googleapis.com"][0m will be created[0m
+[90m07:50:06.217 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m[0m  [32m+[0m[0m resource "google_project_service" "project_services" {[0m
+[90m07:50:06.217 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m      [32m+[0m[0m disable_dependent_services = false[0m
+[90m07:50:06.217 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m      [32m+[0m[0m disable_on_destroy         = false[0m
+[90m07:50:06.217 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m      [32m+[0m[0m id                         = (known after apply)[0m
+[90m07:50:06.217 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m      [32m+[0m[0m project                    = (known after apply)[0m
+[90m07:50:06.217 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m      [32m+[0m[0m service                    = "iam.googleapis.com"[0m
+[90m07:50:06.217 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m    }
+[90m07:50:06.217 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m[1m  # module.project-factory.module.project_services.google_project_service.project_services["iap.googleapis.com"][0m will be created[0m
+[90m07:50:06.217 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m[0m  [32m+[0m[0m resource "google_project_service" "project_services" {[0m
+[90m07:50:06.217 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m      [32m+[0m[0m disable_dependent_services = false[0m
+[90m07:50:06.217 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m      [32m+[0m[0m disable_on_destroy         = false[0m
+[90m07:50:06.217 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m      [32m+[0m[0m id                         = (known after apply)[0m
+[90m07:50:06.217 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m      [32m+[0m[0m project                    = (known after apply)[0m
+[90m07:50:06.217 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m      [32m+[0m[0m service                    = "iap.googleapis.com"[0m
+[90m07:50:06.217 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m    }
+[90m07:50:06.218 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m[1m  # module.project-factory.module.project_services.google_project_service.project_services["networkmanagement.googleapis.com"][0m will be created[0m
+[90m07:50:06.218 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m[0m  [32m+[0m[0m resource "google_project_service" "project_services" {[0m
+[90m07:50:06.218 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m      [32m+[0m[0m disable_dependent_services = false[0m
+[90m07:50:06.218 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m      [32m+[0m[0m disable_on_destroy         = false[0m
+[90m07:50:06.218 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m      [32m+[0m[0m id                         = (known after apply)[0m
+[90m07:50:06.218 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m      [32m+[0m[0m project                    = (known after apply)[0m
+[90m07:50:06.218 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m      [32m+[0m[0m service                    = "networkmanagement.googleapis.com"[0m
+[90m07:50:06.218 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m    }
+[90m07:50:06.218 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m[1m  # module.project-factory.module.project_services.google_project_service.project_services["secretmanager.googleapis.com"][0m will be created[0m
+[90m07:50:06.218 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m[0m  [32m+[0m[0m resource "google_project_service" "project_services" {[0m
+[90m07:50:06.218 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m      [32m+[0m[0m disable_dependent_services = false[0m
+[90m07:50:06.218 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m      [32m+[0m[0m disable_on_destroy         = false[0m
+[90m07:50:06.218 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m      [32m+[0m[0m id                         = (known after apply)[0m
+[90m07:50:06.218 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m      [32m+[0m[0m project                    = (known after apply)[0m
+[90m07:50:06.218 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m      [32m+[0m[0m service                    = "secretmanager.googleapis.com"[0m
+[90m07:50:06.218 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m    }
+[90m07:50:06.218 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m[1m  # module.project-factory.module.project_services.google_project_service.project_services["servicenetworking.googleapis.com"][0m will be created[0m
+[90m07:50:06.218 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m[0m  [32m+[0m[0m resource "google_project_service" "project_services" {[0m
+[90m07:50:06.218 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m      [32m+[0m[0m disable_dependent_services = false[0m
+[90m07:50:06.218 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m      [32m+[0m[0m disable_on_destroy         = false[0m
+[90m07:50:06.219 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m      [32m+[0m[0m id                         = (known after apply)[0m
+[90m07:50:06.219 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m      [32m+[0m[0m project                    = (known after apply)[0m
+[90m07:50:06.219 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m      [32m+[0m[0m service                    = "servicenetworking.googleapis.com"[0m
+[90m07:50:06.219 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m    }
+[90m07:50:06.219 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m[1m  # module.project-factory.module.project_services.google_project_service.project_services["serviceusage.googleapis.com"][0m will be created[0m
+[90m07:50:06.219 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m[0m  [32m+[0m[0m resource "google_project_service" "project_services" {[0m
+[90m07:50:06.219 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m      [32m+[0m[0m disable_dependent_services = false[0m
+[90m07:50:06.219 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m      [32m+[0m[0m disable_on_destroy         = false[0m
+[90m07:50:06.219 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m      [32m+[0m[0m id                         = (known after apply)[0m
+[90m07:50:06.219 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m      [32m+[0m[0m project                    = (known after apply)[0m
+[90m07:50:06.219 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m      [32m+[0m[0m service                    = "serviceusage.googleapis.com"[0m
+[90m07:50:06.219 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m    }
+[90m07:50:06.219 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m[1m  # module.project-factory.module.project_services.google_project_service.project_services["storage-api.googleapis.com"][0m will be created[0m
+[90m07:50:06.219 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m[0m  [32m+[0m[0m resource "google_project_service" "project_services" {[0m
+[90m07:50:06.219 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m      [32m+[0m[0m disable_dependent_services = false[0m
+[90m07:50:06.219 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m      [32m+[0m[0m disable_on_destroy         = false[0m
+[90m07:50:06.219 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m      [32m+[0m[0m id                         = (known after apply)[0m
+[90m07:50:06.219 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m      [32m+[0m[0m project                    = (known after apply)[0m
+[90m07:50:06.219 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m      [32m+[0m[0m service                    = "storage-api.googleapis.com"[0m
+[90m07:50:06.219 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m    }
+[90m07:50:06.220 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m[1mPlan:[0m 17 to add, 0 to change, 0 to destroy.[0m
+[90m07:50:06.220 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m[0m[0m
+[90m07:50:06.220 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0mChanges to Outputs:
+[90m07:50:06.220 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m  [32m+[0m[0m api_s_account                = (known after apply)[0m
+[90m07:50:06.220 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m  [32m+[0m[0m api_s_account_fmt            = (known after apply)[0m
+[90m07:50:06.220 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m  [32m+[0m[0m budget_name                  = ""[0m
+[90m07:50:06.220 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m  [32m+[0m[0m domain                       = "algol60.net"[0m
+[90m07:50:06.220 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m  [32m+[0m[0m enabled_api_identities       = {}[0m
+[90m07:50:06.220 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m  [32m+[0m[0m enabled_apis                 = [[0m
+[90m07:50:06.220 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m      [32m+[0m[0m "admin.googleapis.com",[0m
+[90m07:50:06.220 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m      [32m+[0m[0m "cloudbilling.googleapis.com",[0m
+[90m07:50:06.220 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m      [32m+[0m[0m "cloudresourcemanager.googleapis.com",[0m
+[90m07:50:06.220 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m      [32m+[0m[0m "compute.googleapis.com",[0m
+[90m07:50:06.220 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m      [32m+[0m[0m "iam.googleapis.com",[0m
+[90m07:50:06.220 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m      [32m+[0m[0m "iap.googleapis.com",[0m
+[90m07:50:06.220 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m      [32m+[0m[0m "networkmanagement.googleapis.com",[0m
+[90m07:50:06.220 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m      [32m+[0m[0m "secretmanager.googleapis.com",[0m
+[90m07:50:06.220 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m      [32m+[0m[0m "servicenetworking.googleapis.com",[0m
+[90m07:50:06.220 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m      [32m+[0m[0m "serviceusage.googleapis.com",[0m
+[90m07:50:06.220 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m      [32m+[0m[0m "storage-api.googleapis.com",[0m
+[90m07:50:06.220 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m    ]
+[90m07:50:06.220 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m  [32m+[0m[0m group_email                  = "vshasta2-owners@algol60.net"[0m
+[90m07:50:06.220 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m  [32m+[0m[0m project_bucket_self_link     = [][0m
+[90m07:50:06.220 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m  [32m+[0m[0m project_bucket_url           = [][0m
+[90m07:50:06.220 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m  [32m+[0m[0m project_id                   = (known after apply)[0m
+[90m07:50:06.220 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m  [32m+[0m[0m project_name                 = "hpe-ochamitest-92578414be"[0m
+[90m07:50:06.220 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m  [32m+[0m[0m project_number               = (known after apply)[0m
+[90m07:50:06.220 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m  [32m+[0m[0m service_account_display_name = "hpe-ochamitest-92578414be Project Service Account"[0m
+[90m07:50:06.221 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m  [32m+[0m[0m service_account_email        = (known after apply)[0m
+[90m07:50:06.221 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m  [32m+[0m[0m service_account_id           = "project-service-account"[0m
+[90m07:50:06.221 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m  [32m+[0m[0m service_account_name         = (known after apply)[0m
+[90m07:50:06.221 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m  [32m+[0m[0m service_account_unique_id    = (known after apply)[0m
+[90m07:50:06.221 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m  [32m+[0m[0m tag_bindings                 = {}[0m
+[90m07:50:06.604 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m[0m[1mmodule.project-factory.random_id.random_project_id_suffix: Creating...[0m[0m[0m
+[90m07:50:06.604 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m[0m[1mmodule.project-factory.random_id.random_project_id_suffix: Creation complete after 0s [id=nRA][0m[0m
+[90m07:50:06.745 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m[0m[1mmodule.project-factory.google_project.main: Creating...[0m[0m[0m
+[90m07:50:16.746 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m[0m[1mmodule.project-factory.google_project.main: Still creating... [10s elapsed][0m[0m[0m
+[90m07:50:26.746 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m[0m[1mmodule.project-factory.google_project.main: Still creating... [20s elapsed][0m[0m[0m
+[90m07:50:36.747 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m[0m[1mmodule.project-factory.google_project.main: Still creating... [30s elapsed][0m[0m[0m
+[90m07:50:46.747 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m[0m[1mmodule.project-factory.google_project.main: Still creating... [40s elapsed][0m[0m[0m
+[90m07:50:56.748 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m[0m[1mmodule.project-factory.google_project.main: Still creating... [50s elapsed][0m[0m[0m
+[90m07:51:06.749 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m[0m[1mmodule.project-factory.google_project.main: Still creating... [1m0s elapsed][0m[0m[0m
+[90m07:51:16.750 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m[0m[1mmodule.project-factory.google_project.main: Still creating... [1m10s elapsed][0m[0m[0m
+[90m07:51:26.751 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m[0m[1mmodule.project-factory.google_project.main: Still creating... [1m20s elapsed][0m[0m[0m
+[90m07:51:36.751 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m[0m[1mmodule.project-factory.google_project.main: Still creating... [1m30s elapsed][0m[0m[0m
+[90m07:51:46.752 [0m[37mSTDOUT [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m[0m[1mmodule.project-factory.google_project.main: Still creating... [1m40s elapsed][0m[0m[0m
+[90m07:51:49.915 [0m[31mSTDERR [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m[31m╷[0m[0m[0m
+[90m07:51:49.915 [0m[31mSTDERR [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m[31m│[0m [0m[1m[31mError: [0m[0m[1mError deleting default network in project hpe-ochamitest-92578414be-9d10: Error waiting for Deleting Firewall: error while retrieving operation: googleapi: Error 403: Compute Engine API has not been used in project hpe-ochamitest-92578414be-9d10 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=hpe-ochamitest-92578414be-9d10 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.[0m
+[90m07:51:49.915 [0m[31mSTDERR [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m[31m│[0m [0mDetails:[0m
+[90m07:51:49.915 [0m[31mSTDERR [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m[31m│[0m [0m[[0m
+[90m07:51:49.915 [0m[31mSTDERR [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m[31m│[0m [0m  {[0m
+[90m07:51:49.915 [0m[31mSTDERR [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m[31m│[0m [0m    "@type": "type.googleapis.com/google.rpc.ErrorInfo",[0m
+[90m07:51:49.915 [0m[31mSTDERR [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m[31m│[0m [0m    "domain": "googleapis.com",[0m
+[90m07:51:49.915 [0m[31mSTDERR [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m[31m│[0m [0m    "metadata": {[0m
+[90m07:51:49.915 [0m[31mSTDERR [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m[31m│[0m [0m      "activationUrl": "https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=hpe-ochamitest-92578414be-9d10",[0m
+[90m07:51:49.916 [0m[31mSTDERR [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m[31m│[0m [0m      "consumer": "projects/hpe-ochamitest-92578414be-9d10",[0m
+[90m07:51:49.916 [0m[31mSTDERR [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m[31m│[0m [0m      "containerInfo": "hpe-ochamitest-92578414be-9d10",[0m
+[90m07:51:49.916 [0m[31mSTDERR [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m[31m│[0m [0m      "service": "compute.googleapis.com",[0m
+[90m07:51:49.916 [0m[31mSTDERR [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m[31m│[0m [0m      "serviceTitle": "Compute Engine API"[0m
+[90m07:51:49.916 [0m[31mSTDERR [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m[31m│[0m [0m    },[0m
+[90m07:51:49.916 [0m[31mSTDERR [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m[31m│[0m [0m    "reason": "SERVICE_DISABLED"[0m
+[90m07:51:49.916 [0m[31mSTDERR [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m[31m│[0m [0m  },[0m
+[90m07:51:49.916 [0m[31mSTDERR [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m[31m│[0m [0m  {[0m
+[90m07:51:49.916 [0m[31mSTDERR [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m[31m│[0m [0m    "@type": "type.googleapis.com/google.rpc.LocalizedMessage",[0m
+[90m07:51:49.916 [0m[31mSTDERR [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m[31m│[0m [0m    "locale": "en-US",[0m
+[90m07:51:49.916 [0m[31mSTDERR [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m[31m│[0m [0m    "message": "Compute Engine API has not been used in project hpe-ochamitest-92578414be-9d10 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=hpe-ochamitest-92578414be-9d10 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry."[0m
+[90m07:51:49.916 [0m[31mSTDERR [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m[31m│[0m [0m  },[0m
+[90m07:51:49.916 [0m[31mSTDERR [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m[31m│[0m [0m  {[0m
+[90m07:51:49.916 [0m[31mSTDERR [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m[31m│[0m [0m    "@type": "type.googleapis.com/google.rpc.Help",[0m
+[90m07:51:49.916 [0m[31mSTDERR [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m[31m│[0m [0m    "links": [[0m
+[90m07:51:49.916 [0m[31mSTDERR [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m[31m│[0m [0m      {[0m
+[90m07:51:49.916 [0m[31mSTDERR [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m[31m│[0m [0m        "description": "Google developers console API activation",[0m
+[90m07:51:49.916 [0m[31mSTDERR [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m[31m│[0m [0m        "url": "https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=hpe-ochamitest-92578414be-9d10"[0m
+[90m07:51:49.917 [0m[31mSTDERR [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m[31m│[0m [0m      }[0m
+[90m07:51:49.917 [0m[31mSTDERR [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m[31m│[0m [0m    ][0m
+[90m07:51:49.917 [0m[31mSTDERR [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m[31m│[0m [0m  }[0m
+[90m07:51:49.917 [0m[31mSTDERR [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m[31m│[0m [0m][0m
+[90m07:51:49.917 [0m[31mSTDERR [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m[31m│[0m [0m, accessNotConfigured[0m[0m
+[90m07:51:49.917 [0m[31mSTDERR [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m[31m│[0m [0m[0m
+[90m07:51:49.917 [0m[31mSTDERR [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m[31m│[0m [0m[0m  with module.project-factory.google_project.main,[0m
+[90m07:51:49.917 [0m[31mSTDERR [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m[31m│[0m [0m  on modules/core_project_factory/main.tf line 73, in resource "google_project" "main":[0m
+[90m07:51:49.917 [0m[31mSTDERR [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m[31m│[0m [0m  73: resource "google_project" "main" [4m{[0m[0m[0m
+[90m07:51:49.917 [0m[31mSTDERR [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m[31m│[0m [0m[0m
+[90m07:51:49.917 [0m[31mSTDERR [0m[38;5;67m[system/project/deploy] [0m[36mterraform: [0m[31m╵[0m[0m[0m
+[90m07:51:50.119 [0m[31mERROR  [0m[38;5;67m[system/project/deploy] [0mterraform invocation failed in ./system/project/deploy/.terragrunt-cache/XNnv4flPz0Aq-8Vymmmpid5tQwM/YDEfvRwJmwIVpFBvl0NyRB7KFiQ
+[90m07:51:50.119 [0m[31mERROR  [0m[38;5;67m[system/project/deploy] [0mModule ./system/project/deploy has finished with an error
+[90m07:51:50.119 [0m[31mERROR  [0m[38;5;95m[system/platform/blade-interconnect/blade-interconnect/firewall/deploy] [0mDependency ./system/project/deploy of module ./system/platform/blade-interconnect/blade-interconnect/firewall/deploy just finished with an error. Module ./system/platform/blade-interconnect/blade-interconnect/firewall/deploy will have to return an error too.
+[90m07:51:50.119 [0m[31mERROR  [0m[38;5;95m[system/platform/blade-interconnect/blade-interconnect/firewall/deploy] [0mModule ./system/platform/blade-interconnect/blade-interconnect/firewall/deploy has finished with an error
+[90m07:51:50.119 [0m[31mERROR  [0m[38;5;96m[system/platform/virtual-blade/compute-blade/compute_instance/deploy] [0mDependency ./system/project/deploy of module ./system/platform/virtual-blade/compute-blade/compute_instance/deploy just finished with an error. Module ./system/platform/virtual-blade/compute-blade/compute_instance/deploy will have to return an error too.
+[90m07:51:50.119 [0m[31mERROR  [0m[38;5;102m[system/platform/blade-interconnect/blade-interconnect/subnet/deploy] [0mDependency ./system/project/deploy of module ./system/platform/blade-interconnect/blade-interconnect/subnet/deploy just finished with an error. Module ./system/platform/blade-interconnect/blade-interconnect/subnet/deploy will have to return an error too.
+[90m07:51:50.119 [0m[31mERROR  [0m[38;5;102m[system/platform/blade-interconnect/blade-interconnect/subnet/deploy] [0mModule ./system/platform/blade-interconnect/blade-interconnect/subnet/deploy has finished with an error
+[90m07:51:50.119 [0m[31mERROR  [0m[38;5;96m[system/platform/virtual-blade/compute-blade/compute_instance/deploy] [0mModule ./system/platform/virtual-blade/compute-blade/compute_instance/deploy has finished with an error
+[90m07:51:50.119 [0m[31mERROR  [0m[38;5;103m[system/platform/virtual-blade/host-blade/compute_instance/deploy] [0mDependency ./system/project/deploy of module ./system/platform/virtual-blade/host-blade/compute_instance/deploy just finished with an error. Module ./system/platform/virtual-blade/host-blade/compute_instance/deploy will have to return an error too.
+[90m07:51:50.120 [0m[31mERROR  [0m[38;5;103m[system/platform/virtual-blade/host-blade/compute_instance/deploy] [0mModule ./system/platform/virtual-blade/host-blade/compute_instance/deploy has finished with an error
+[90m07:51:50.119 [0m[31mERROR  [0m[38;5;108m[system/platform/virtual-blade/host-blade/service-account/deploy] [0mDependency ./system/project/deploy of module ./system/platform/virtual-blade/host-blade/service-account/deploy just finished with an error. Module ./system/platform/virtual-blade/host-blade/service-account/deploy will have to return an error too.
+[90m07:51:50.120 [0m[31mERROR  [0m[38;5;108m[system/platform/virtual-blade/host-blade/service-account/deploy] [0mModule ./system/platform/virtual-blade/host-blade/service-account/deploy has finished with an error
+[90m07:51:50.120 [0m[31mERROR  [0m[38;5;109m[system/platform/virtual-blade/host-blade/service-account/iam/organization/deploy] [0mDependency ./system/platform/virtual-blade/host-blade/service-account/deploy of module ./system/platform/virtual-blade/host-blade/service-account/iam/organization/deploy just finished with an error. Module ./system/platform/virtual-blade/host-blade/service-account/iam/organization/deploy will have to return an error too.
+[90m07:51:50.120 [0m[31mERROR  [0m[38;5;109m[system/platform/virtual-blade/host-blade/service-account/iam/organization/deploy] [0mModule ./system/platform/virtual-blade/host-blade/service-account/iam/organization/deploy has finished with an error
+[90m07:51:50.119 [0m[31mERROR  [0m[38;5;139m[system/platform/virtual-blade/compute-blade/instance-template/deploy] [0mDependency ./system/project/deploy of module ./system/platform/virtual-blade/compute-blade/instance-template/deploy just finished with an error. Module ./system/platform/virtual-blade/compute-blade/instance-template/deploy will have to return an error too.
+[90m07:51:50.120 [0m[31mERROR  [0m[38;5;138m[system/platform/virtual-blade/host-blade/instance-template/deploy] [0mDependency ./system/project/deploy of module ./system/platform/virtual-blade/host-blade/instance-template/deploy just finished with an error. Module ./system/platform/virtual-blade/host-blade/instance-template/deploy will have to return an error too.
+[90m07:51:50.120 [0m[31mERROR  [0m[38;5;139m[system/platform/virtual-blade/compute-blade/instance-template/deploy] [0mModule ./system/platform/virtual-blade/compute-blade/instance-template/deploy has finished with an error
+[90m07:51:50.120 [0m[31mERROR  [0m[38;5;138m[system/platform/virtual-blade/host-blade/instance-template/deploy] [0mModule ./system/platform/virtual-blade/host-blade/instance-template/deploy has finished with an error
+[90m07:51:50.120 [0m[31mERROR  [0m[38;5;144m[system/platform/virtual-blade/host-blade/service-account/iam/cluster_project/deploy] [0mDependency ./system/project/deploy of module ./system/platform/virtual-blade/host-blade/service-account/iam/cluster_project/deploy just finished with an error. Module ./system/platform/virtual-blade/host-blade/service-account/iam/cluster_project/deploy will have to return an error too.
+[90m07:51:50.121 [0m[31mERROR  [0m[38;5;144m[system/platform/virtual-blade/host-blade/service-account/iam/cluster_project/deploy] [0mModule ./system/platform/virtual-blade/host-blade/service-account/iam/cluster_project/deploy has finished with an error
+[90m07:51:50.121 [0m[31mERROR  [0m[38;5;145m[system/platform/virtual-blade/host-blade/service-account/iam/image-source/deploy] [0mDependency ./system/project/deploy of module ./system/platform/virtual-blade/host-blade/service-account/iam/image-source/deploy just finished with an error. Module ./system/platform/virtual-blade/host-blade/service-account/iam/image-source/deploy will have to return an error too.
+[90m07:51:50.121 [0m[31mERROR  [0m[38;5;145m[system/platform/virtual-blade/host-blade/service-account/iam/image-source/deploy] [0mModule ./system/platform/virtual-blade/host-blade/service-account/iam/image-source/deploy has finished with an error
+[90m07:51:50.121 [0m[31mERROR  [0m[38;5;66m[system/platform/blade-interconnect/blade-interconnect/vpc/deploy] [0mDependency ./system/project/deploy of module ./system/platform/blade-interconnect/blade-interconnect/vpc/deploy just finished with an error. Module ./system/platform/blade-interconnect/blade-interconnect/vpc/deploy will have to return an error too.
+[90m07:51:50.121 [0m[31mERROR  [0m[38;5;66m[system/platform/blade-interconnect/blade-interconnect/vpc/deploy] [0mModule ./system/platform/blade-interconnect/blade-interconnect/vpc/deploy has finished with an error
+[90m07:51:50.119 [0m[31mERROR  [0m[38;5;67m[system/platform/blade-interconnect/blade-interconnect/routes/deploy] [0mDependency ./system/project/deploy of module ./system/platform/blade-interconnect/blade-interconnect/routes/deploy just finished with an error. Module ./system/platform/blade-interconnect/blade-interconnect/routes/deploy will have to return an error too.
+[90m07:51:50.121 [0m[31mERROR  [0m[38;5;67m[system/platform/blade-interconnect/blade-interconnect/routes/deploy] [0mModule ./system/platform/blade-interconnect/blade-interconnect/routes/deploy has finished with an error
+[90m07:51:50.119 [0m[31mERROR  [0m[38;5;95m[system/platform/virtual-blade/compute-blade/service-account/deploy] [0mDependency ./system/project/deploy of module ./system/platform/virtual-blade/compute-blade/service-account/deploy just finished with an error. Module ./system/platform/virtual-blade/compute-blade/service-account/deploy will have to return an error too.
+[90m07:51:50.121 [0m[31mERROR  [0m[38;5;95m[system/platform/virtual-blade/compute-blade/service-account/deploy] [0mModule ./system/platform/virtual-blade/compute-blade/service-account/deploy has finished with an error
+[90m07:51:50.121 [0m[31mERROR  [0m[38;5;96m[system/platform/virtual-blade/host-blade/service-account/iam/clusters_folder/deploy] [0mDependency ./system/platform/virtual-blade/host-blade/service-account/deploy of module ./system/platform/virtual-blade/host-blade/service-account/iam/clusters_folder/deploy just finished with an error. Module ./system/platform/virtual-blade/host-blade/service-account/iam/clusters_folder/deploy will have to return an error too.
+[90m07:51:50.122 [0m[31mERROR  [0m[38;5;96m[system/platform/virtual-blade/host-blade/service-account/iam/clusters_folder/deploy] [0mModule ./system/platform/virtual-blade/host-blade/service-account/iam/clusters_folder/deploy has finished with an error
+[90m07:51:50.121 [0m[31mERROR  [0m[38;5;102m[system/platform/virtual-blade/compute-blade/service-account/iam/seed_project/deploy] [0mDependency ./system/platform/virtual-blade/compute-blade/service-account/deploy of module ./system/platform/virtual-blade/compute-blade/service-account/iam/seed_project/deploy just finished with an error. Module ./system/platform/virtual-blade/compute-blade/service-account/iam/seed_project/deploy will have to return an error too.
+[90m07:51:50.122 [0m[31mERROR  [0m[38;5;103m[system/platform/virtual-blade/compute-blade/service-account/iam/billing/deploy] [0mDependency ./system/platform/virtual-blade/compute-blade/service-account/deploy of module ./system/platform/virtual-blade/compute-blade/service-account/iam/billing/deploy just finished with an error. Module ./system/platform/virtual-blade/compute-blade/service-account/iam/billing/deploy will have to return an error too.
+[90m07:51:50.123 [0m[31mERROR  [0m[38;5;103m[system/platform/virtual-blade/compute-blade/service-account/iam/billing/deploy] [0mModule ./system/platform/virtual-blade/compute-blade/service-account/iam/billing/deploy has finished with an error
+[90m07:51:50.123 [0m[31mERROR  [0m[38;5;108m[system/platform/virtual-blade/host-blade/service-account/iam/seed_project/deploy] [0mDependency ./system/platform/virtual-blade/host-blade/service-account/deploy of module ./system/platform/virtual-blade/host-blade/service-account/iam/seed_project/deploy just finished with an error. Module ./system/platform/virtual-blade/host-blade/service-account/iam/seed_project/deploy will have to return an error too.
+[90m07:51:50.123 [0m[31mERROR  [0m[38;5;108m[system/platform/virtual-blade/host-blade/service-account/iam/seed_project/deploy] [0mModule ./system/platform/virtual-blade/host-blade/service-account/iam/seed_project/deploy has finished with an error
+[90m07:51:50.122 [0m[31mERROR  [0m[38;5;102m[system/platform/virtual-blade/compute-blade/service-account/iam/seed_project/deploy] [0mModule ./system/platform/virtual-blade/compute-blade/service-account/iam/seed_project/deploy has finished with an error
+[90m07:51:50.121 [0m[31mERROR  [0m[38;5;109m[system/platform/virtual-blade/compute-blade/service-account/iam/cluster_project/deploy] [0mDependency ./system/project/deploy of module ./system/platform/virtual-blade/compute-blade/service-account/iam/cluster_project/deploy just finished with an error. Module ./system/platform/virtual-blade/compute-blade/service-account/iam/cluster_project/deploy will have to return an error too.
+[90m07:51:50.124 [0m[31mERROR  [0m[38;5;109m[system/platform/virtual-blade/compute-blade/service-account/iam/cluster_project/deploy] [0mModule ./system/platform/virtual-blade/compute-blade/service-account/iam/cluster_project/deploy has finished with an error
+[90m07:51:50.123 [0m[31mERROR  [0m[38;5;139m[system/platform/virtual-blade/compute-blade/service-account/iam/organization/deploy] [0mDependency ./system/platform/virtual-blade/compute-blade/service-account/deploy of module ./system/platform/virtual-blade/compute-blade/service-account/iam/organization/deploy just finished with an error. Module ./system/platform/virtual-blade/compute-blade/service-account/iam/organization/deploy will have to return an error too.
+[90m07:51:50.124 [0m[31mERROR  [0m[38;5;139m[system/platform/virtual-blade/compute-blade/service-account/iam/organization/deploy] [0mModule ./system/platform/virtual-blade/compute-blade/service-account/iam/organization/deploy has finished with an error
+[90m07:51:50.121 [0m[31mERROR  [0m[38;5;138m[system/platform/virtual-blade/compute-blade/service-account/iam/image-source/deploy] [0mDependency ./system/project/deploy of module ./system/platform/virtual-blade/compute-blade/service-account/iam/image-source/deploy just finished with an error. Module ./system/platform/virtual-blade/compute-blade/service-account/iam/image-source/deploy will have to return an error too.
+[90m07:51:50.124 [0m[31mERROR  [0m[38;5;138m[system/platform/virtual-blade/compute-blade/service-account/iam/image-source/deploy] [0mModule ./system/platform/virtual-blade/compute-blade/service-account/iam/image-source/deploy has finished with an error
+[90m07:51:50.124 [0m[31mERROR  [0m[38;5;144m[system/platform/virtual-blade/compute-blade/service-account/iam/clusters_folder/deploy] [0mDependency ./system/platform/virtual-blade/compute-blade/service-account/deploy of module ./system/platform/virtual-blade/compute-blade/service-account/iam/clusters_folder/deploy just finished with an error. Module ./system/platform/virtual-blade/compute-blade/service-account/iam/clusters_folder/deploy will have to return an error too.
+[90m07:51:50.124 [0m[31mERROR  [0m[38;5;144m[system/platform/virtual-blade/compute-blade/service-account/iam/clusters_folder/deploy] [0mModule ./system/platform/virtual-blade/compute-blade/service-account/iam/clusters_folder/deploy has finished with an error
+[90m07:51:50.121 [0m[31mERROR  [0m[38;5;145m[system/platform/virtual-blade/host-blade/service-account/iam/billing/deploy] [0mDependency ./system/platform/virtual-blade/host-blade/service-account/deploy of module ./system/platform/virtual-blade/host-blade/service-account/iam/billing/deploy just finished with an error. Module ./system/platform/virtual-blade/host-blade/service-account/iam/billing/deploy will have to return an error too.
+[90m07:51:50.124 [0m[31mERROR  [0m[38;5;145m[system/platform/virtual-blade/host-blade/service-account/iam/billing/deploy] [0mModule ./system/platform/virtual-blade/host-blade/service-account/iam/billing/deploy has finished with an error
+[90m07:51:50.124 [0m[32mINFO   [0mShutting down Terragrunt Cache server...
+[90m07:51:50.124 [0m[32mINFO   [0mTerragrunt Cache server stopped
+[90m07:51:50.133 [0m[31mERROR  [0m23 errors occurred:
+
+* Failed to execute "terraform apply -auto-approve -input=false" in ./system/project/deploy/.terragrunt-cache/XNnv4flPz0Aq-8Vymmmpid5tQwM/YDEfvRwJmwIVpFBvl0NyRB7KFiQ
+  [31m╷[0m[0m
+  [31m│[0m [0m[1m[31mError: [0m[0m[1mError deleting default network in project hpe-ochamitest-92578414be-9d10: Error waiting for Deleting Firewall: error while retrieving operation: googleapi: Error 403: Compute Engine API has not been used in project hpe-ochamitest-92578414be-9d10 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=hpe-ochamitest-92578414be-9d10 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.
+  [31m│[0m [0mDetails:
+  [31m│[0m [0m[
+  [31m│[0m [0m  {
+  [31m│[0m [0m    "@type": "type.googleapis.com/google.rpc.ErrorInfo",
+  [31m│[0m [0m    "domain": "googleapis.com",
+  [31m│[0m [0m    "metadata": {
+  [31m│[0m [0m      "activationUrl": "https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=hpe-ochamitest-92578414be-9d10",
+  [31m│[0m [0m      "consumer": "projects/hpe-ochamitest-92578414be-9d10",
+  [31m│[0m [0m      "containerInfo": "hpe-ochamitest-92578414be-9d10",
+  [31m│[0m [0m      "service": "compute.googleapis.com",
+  [31m│[0m [0m      "serviceTitle": "Compute Engine API"
+  [31m│[0m [0m    },
+  [31m│[0m [0m    "reason": "SERVICE_DISABLED"
+  [31m│[0m [0m  },
+  [31m│[0m [0m  {
+  [31m│[0m [0m    "@type": "type.googleapis.com/google.rpc.LocalizedMessage",
+  [31m│[0m [0m    "locale": "en-US",
+  [31m│[0m [0m    "message": "Compute Engine API has not been used in project hpe-ochamitest-92578414be-9d10 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=hpe-ochamitest-92578414be-9d10 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry."
+  [31m│[0m [0m  },
+  [31m│[0m [0m  {
+  [31m│[0m [0m    "@type": "type.googleapis.com/google.rpc.Help",
+  [31m│[0m [0m    "links": [
+  [31m│[0m [0m      {
+  [31m│[0m [0m        "description": "Google developers console API activation",
+  [31m│[0m [0m        "url": "https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=hpe-ochamitest-92578414be-9d10"
+  [31m│[0m [0m      }
+  [31m│[0m [0m    ]
+  [31m│[0m [0m  }
+  [31m│[0m [0m]
+  [31m│[0m [0m, accessNotConfigured[0m
+  [31m│[0m [0m
+  [31m│[0m [0m[0m  with module.project-factory.google_project.main,
+  [31m│[0m [0m  on modules/core_project_factory/main.tf line 73, in resource "google_project" "main":
+  [31m│[0m [0m  73: resource "google_project" "main" [4m{[0m[0m
+  [31m│[0m [0m
+  [31m╵[0m[0m
+  
+  exit status 1
+
+* Failed to execute "terraform apply -auto-approve -input=false" in ./system/project/deploy/.terragrunt-cache/XNnv4flPz0Aq-8Vymmmpid5tQwM/YDEfvRwJmwIVpFBvl0NyRB7KFiQ
+  [31m╷[0m[0m
+  [31m│[0m [0m[1m[31mError: [0m[0m[1mError deleting default network in project hpe-ochamitest-92578414be-9d10: Error waiting for Deleting Firewall: error while retrieving operation: googleapi: Error 403: Compute Engine API has not been used in project hpe-ochamitest-92578414be-9d10 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=hpe-ochamitest-92578414be-9d10 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.
+  [31m│[0m [0mDetails:
+  [31m│[0m [0m[
+  [31m│[0m [0m  {
+  [31m│[0m [0m    "@type": "type.googleapis.com/google.rpc.ErrorInfo",
+  [31m│[0m [0m    "domain": "googleapis.com",
+  [31m│[0m [0m    "metadata": {
+  [31m│[0m [0m      "activationUrl": "https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=hpe-ochamitest-92578414be-9d10",
+  [31m│[0m [0m      "consumer": "projects/hpe-ochamitest-92578414be-9d10",
+  [31m│[0m [0m      "containerInfo": "hpe-ochamitest-92578414be-9d10",
+  [31m│[0m [0m      "service": "compute.googleapis.com",
+  [31m│[0m [0m      "serviceTitle": "Compute Engine API"
+  [31m│[0m [0m    },
+  [31m│[0m [0m    "reason": "SERVICE_DISABLED"
+  [31m│[0m [0m  },
+  [31m│[0m [0m  {
+  [31m│[0m [0m    "@type": "type.googleapis.com/google.rpc.LocalizedMessage",
+  [31m│[0m [0m    "locale": "en-US",
+  [31m│[0m [0m    "message": "Compute Engine API has not been used in project hpe-ochamitest-92578414be-9d10 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=hpe-ochamitest-92578414be-9d10 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry."
+  [31m│[0m [0m  },
+  [31m│[0m [0m  {
+  [31m│[0m [0m    "@type": "type.googleapis.com/google.rpc.Help",
+  [31m│[0m [0m    "links": [
+  [31m│[0m [0m      {
+  [31m│[0m [0m        "description": "Google developers console API activation",
+  [31m│[0m [0m        "url": "https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=hpe-ochamitest-92578414be-9d10"
+  [31m│[0m [0m      }
+  [31m│[0m [0m    ]
+  [31m│[0m [0m  }
+  [31m│[0m [0m]
+  [31m│[0m [0m, accessNotConfigured[0m
+  [31m│[0m [0m
+  [31m│[0m [0m[0m  with module.project-factory.google_project.main,
+  [31m│[0m [0m  on modules/core_project_factory/main.tf line 73, in resource "google_project" "main":
+  [31m│[0m [0m  73: resource "google_project" "main" [4m{[0m[0m
+  [31m│[0m [0m
+  [31m╵[0m[0m
+  
+  exit status 1
+
+* Failed to execute "terraform apply -auto-approve -input=false" in ./system/project/deploy/.terragrunt-cache/XNnv4flPz0Aq-8Vymmmpid5tQwM/YDEfvRwJmwIVpFBvl0NyRB7KFiQ
+  [31m╷[0m[0m
+  [31m│[0m [0m[1m[31mError: [0m[0m[1mError deleting default network in project hpe-ochamitest-92578414be-9d10: Error waiting for Deleting Firewall: error while retrieving operation: googleapi: Error 403: Compute Engine API has not been used in project hpe-ochamitest-92578414be-9d10 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=hpe-ochamitest-92578414be-9d10 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.
+  [31m│[0m [0mDetails:
+  [31m│[0m [0m[
+  [31m│[0m [0m  {
+  [31m│[0m [0m    "@type": "type.googleapis.com/google.rpc.ErrorInfo",
+  [31m│[0m [0m    "domain": "googleapis.com",
+  [31m│[0m [0m    "metadata": {
+  [31m│[0m [0m      "activationUrl": "https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=hpe-ochamitest-92578414be-9d10",
+  [31m│[0m [0m      "consumer": "projects/hpe-ochamitest-92578414be-9d10",
+  [31m│[0m [0m      "containerInfo": "hpe-ochamitest-92578414be-9d10",
+  [31m│[0m [0m      "service": "compute.googleapis.com",
+  [31m│[0m [0m      "serviceTitle": "Compute Engine API"
+  [31m│[0m [0m    },
+  [31m│[0m [0m    "reason": "SERVICE_DISABLED"
+  [31m│[0m [0m  },
+  [31m│[0m [0m  {
+  [31m│[0m [0m    "@type": "type.googleapis.com/google.rpc.LocalizedMessage",
+  [31m│[0m [0m    "locale": "en-US",
+  [31m│[0m [0m    "message": "Compute Engine API has not been used in project hpe-ochamitest-92578414be-9d10 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=hpe-ochamitest-92578414be-9d10 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry."
+  [31m│[0m [0m  },
+  [31m│[0m [0m  {
+  [31m│[0m [0m    "@type": "type.googleapis.com/google.rpc.Help",
+  [31m│[0m [0m    "links": [
+  [31m│[0m [0m      {
+  [31m│[0m [0m        "description": "Google developers console API activation",
+  [31m│[0m [0m        "url": "https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=hpe-ochamitest-92578414be-9d10"
+  [31m│[0m [0m      }
+  [31m│[0m [0m    ]
+  [31m│[0m [0m  }
+  [31m│[0m [0m]
+  [31m│[0m [0m, accessNotConfigured[0m
+  [31m│[0m [0m
+  [31m│[0m [0m[0m  with module.project-factory.google_project.main,
+  [31m│[0m [0m  on modules/core_project_factory/main.tf line 73, in resource "google_project" "main":
+  [31m│[0m [0m  73: resource "google_project" "main" [4m{[0m[0m
+  [31m│[0m [0m
+  [31m╵[0m[0m
+  
+  exit status 1
+
+* Failed to execute "terraform apply -auto-approve -input=false" in ./system/project/deploy/.terragrunt-cache/XNnv4flPz0Aq-8Vymmmpid5tQwM/YDEfvRwJmwIVpFBvl0NyRB7KFiQ
+  [31m╷[0m[0m
+  [31m│[0m [0m[1m[31mError: [0m[0m[1mError deleting default network in project hpe-ochamitest-92578414be-9d10: Error waiting for Deleting Firewall: error while retrieving operation: googleapi: Error 403: Compute Engine API has not been used in project hpe-ochamitest-92578414be-9d10 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=hpe-ochamitest-92578414be-9d10 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.
+  [31m│[0m [0mDetails:
+  [31m│[0m [0m[
+  [31m│[0m [0m  {
+  [31m│[0m [0m    "@type": "type.googleapis.com/google.rpc.ErrorInfo",
+  [31m│[0m [0m    "domain": "googleapis.com",
+  [31m│[0m [0m    "metadata": {
+  [31m│[0m [0m      "activationUrl": "https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=hpe-ochamitest-92578414be-9d10",
+  [31m│[0m [0m      "consumer": "projects/hpe-ochamitest-92578414be-9d10",
+  [31m│[0m [0m      "containerInfo": "hpe-ochamitest-92578414be-9d10",
+  [31m│[0m [0m      "service": "compute.googleapis.com",
+  [31m│[0m [0m      "serviceTitle": "Compute Engine API"
+  [31m│[0m [0m    },
+  [31m│[0m [0m    "reason": "SERVICE_DISABLED"
+  [31m│[0m [0m  },
+  [31m│[0m [0m  {
+  [31m│[0m [0m    "@type": "type.googleapis.com/google.rpc.LocalizedMessage",
+  [31m│[0m [0m    "locale": "en-US",
+  [31m│[0m [0m    "message": "Compute Engine API has not been used in project hpe-ochamitest-92578414be-9d10 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=hpe-ochamitest-92578414be-9d10 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry."
+  [31m│[0m [0m  },
+  [31m│[0m [0m  {
+  [31m│[0m [0m    "@type": "type.googleapis.com/google.rpc.Help",
+  [31m│[0m [0m    "links": [
+  [31m│[0m [0m      {
+  [31m│[0m [0m        "description": "Google developers console API activation",
+  [31m│[0m [0m        "url": "https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=hpe-ochamitest-92578414be-9d10"
+  [31m│[0m [0m      }
+  [31m│[0m [0m    ]
+  [31m│[0m [0m  }
+  [31m│[0m [0m]
+  [31m│[0m [0m, accessNotConfigured[0m
+  [31m│[0m [0m
+  [31m│[0m [0m[0m  with module.project-factory.google_project.main,
+  [31m│[0m [0m  on modules/core_project_factory/main.tf line 73, in resource "google_project" "main":
+  [31m│[0m [0m  73: resource "google_project" "main" [4m{[0m[0m
+  [31m│[0m [0m
+  [31m╵[0m[0m
+  
+  exit status 1
+
+* Failed to execute "terraform apply -auto-approve -input=false" in ./system/project/deploy/.terragrunt-cache/XNnv4flPz0Aq-8Vymmmpid5tQwM/YDEfvRwJmwIVpFBvl0NyRB7KFiQ
+  [31m╷[0m[0m
+  [31m│[0m [0m[1m[31mError: [0m[0m[1mError deleting default network in project hpe-ochamitest-92578414be-9d10: Error waiting for Deleting Firewall: error while retrieving operation: googleapi: Error 403: Compute Engine API has not been used in project hpe-ochamitest-92578414be-9d10 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=hpe-ochamitest-92578414be-9d10 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.
+  [31m│[0m [0mDetails:
+  [31m│[0m [0m[
+  [31m│[0m [0m  {
+  [31m│[0m [0m    "@type": "type.googleapis.com/google.rpc.ErrorInfo",
+  [31m│[0m [0m    "domain": "googleapis.com",
+  [31m│[0m [0m    "metadata": {
+  [31m│[0m [0m      "activationUrl": "https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=hpe-ochamitest-92578414be-9d10",
+  [31m│[0m [0m      "consumer": "projects/hpe-ochamitest-92578414be-9d10",
+  [31m│[0m [0m      "containerInfo": "hpe-ochamitest-92578414be-9d10",
+  [31m│[0m [0m      "service": "compute.googleapis.com",
+  [31m│[0m [0m      "serviceTitle": "Compute Engine API"
+  [31m│[0m [0m    },
+  [31m│[0m [0m    "reason": "SERVICE_DISABLED"
+  [31m│[0m [0m  },
+  [31m│[0m [0m  {
+  [31m│[0m [0m    "@type": "type.googleapis.com/google.rpc.LocalizedMessage",
+  [31m│[0m [0m    "locale": "en-US",
+  [31m│[0m [0m    "message": "Compute Engine API has not been used in project hpe-ochamitest-92578414be-9d10 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=hpe-ochamitest-92578414be-9d10 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry."
+  [31m│[0m [0m  },
+  [31m│[0m [0m  {
+  [31m│[0m [0m    "@type": "type.googleapis.com/google.rpc.Help",
+  [31m│[0m [0m    "links": [
+  [31m│[0m [0m      {
+  [31m│[0m [0m        "description": "Google developers console API activation",
+  [31m│[0m [0m        "url": "https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=hpe-ochamitest-92578414be-9d10"
+  [31m│[0m [0m      }
+  [31m│[0m [0m    ]
+  [31m│[0m [0m  }
+  [31m│[0m [0m]
+  [31m│[0m [0m, accessNotConfigured[0m
+  [31m│[0m [0m
+  [31m│[0m [0m[0m  with module.project-factory.google_project.main,
+  [31m│[0m [0m  on modules/core_project_factory/main.tf line 73, in resource "google_project" "main":
+  [31m│[0m [0m  73: resource "google_project" "main" [4m{[0m[0m
+  [31m│[0m [0m
+  [31m╵[0m[0m
+  
+  exit status 1
+
+* Failed to execute "terraform apply -auto-approve -input=false" in ./system/project/deploy/.terragrunt-cache/XNnv4flPz0Aq-8Vymmmpid5tQwM/YDEfvRwJmwIVpFBvl0NyRB7KFiQ
+  [31m╷[0m[0m
+  [31m│[0m [0m[1m[31mError: [0m[0m[1mError deleting default network in project hpe-ochamitest-92578414be-9d10: Error waiting for Deleting Firewall: error while retrieving operation: googleapi: Error 403: Compute Engine API has not been used in project hpe-ochamitest-92578414be-9d10 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=hpe-ochamitest-92578414be-9d10 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.
+  [31m│[0m [0mDetails:
+  [31m│[0m [0m[
+  [31m│[0m [0m  {
+  [31m│[0m [0m    "@type": "type.googleapis.com/google.rpc.ErrorInfo",
+  [31m│[0m [0m    "domain": "googleapis.com",
+  [31m│[0m [0m    "metadata": {
+  [31m│[0m [0m      "activationUrl": "https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=hpe-ochamitest-92578414be-9d10",
+  [31m│[0m [0m      "consumer": "projects/hpe-ochamitest-92578414be-9d10",
+  [31m│[0m [0m      "containerInfo": "hpe-ochamitest-92578414be-9d10",
+  [31m│[0m [0m      "service": "compute.googleapis.com",
+  [31m│[0m [0m      "serviceTitle": "Compute Engine API"
+  [31m│[0m [0m    },
+  [31m│[0m [0m    "reason": "SERVICE_DISABLED"
+  [31m│[0m [0m  },
+  [31m│[0m [0m  {
+  [31m│[0m [0m    "@type": "type.googleapis.com/google.rpc.LocalizedMessage",
+  [31m│[0m [0m    "locale": "en-US",
+  [31m│[0m [0m    "message": "Compute Engine API has not been used in project hpe-ochamitest-92578414be-9d10 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=hpe-ochamitest-92578414be-9d10 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry."
+  [31m│[0m [0m  },
+  [31m│[0m [0m  {
+  [31m│[0m [0m    "@type": "type.googleapis.com/google.rpc.Help",
+  [31m│[0m [0m    "links": [
+  [31m│[0m [0m      {
+  [31m│[0m [0m        "description": "Google developers console API activation",
+  [31m│[0m [0m        "url": "https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=hpe-ochamitest-92578414be-9d10"
+  [31m│[0m [0m      }
+  [31m│[0m [0m    ]
+  [31m│[0m [0m  }
+  [31m│[0m [0m]
+  [31m│[0m [0m, accessNotConfigured[0m
+  [31m│[0m [0m
+  [31m│[0m [0m[0m  with module.project-factory.google_project.main,
+  [31m│[0m [0m  on modules/core_project_factory/main.tf line 73, in resource "google_project" "main":
+  [31m│[0m [0m  73: resource "google_project" "main" [4m{[0m[0m
+  [31m│[0m [0m
+  [31m╵[0m[0m
+  
+  exit status 1
+
+* Failed to execute "terraform apply -auto-approve -input=false" in ./system/project/deploy/.terragrunt-cache/XNnv4flPz0Aq-8Vymmmpid5tQwM/YDEfvRwJmwIVpFBvl0NyRB7KFiQ
+  [31m╷[0m[0m
+  [31m│[0m [0m[1m[31mError: [0m[0m[1mError deleting default network in project hpe-ochamitest-92578414be-9d10: Error waiting for Deleting Firewall: error while retrieving operation: googleapi: Error 403: Compute Engine API has not been used in project hpe-ochamitest-92578414be-9d10 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=hpe-ochamitest-92578414be-9d10 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.
+  [31m│[0m [0mDetails:
+  [31m│[0m [0m[
+  [31m│[0m [0m  {
+  [31m│[0m [0m    "@type": "type.googleapis.com/google.rpc.ErrorInfo",
+  [31m│[0m [0m    "domain": "googleapis.com",
+  [31m│[0m [0m    "metadata": {
+  [31m│[0m [0m      "activationUrl": "https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=hpe-ochamitest-92578414be-9d10",
+  [31m│[0m [0m      "consumer": "projects/hpe-ochamitest-92578414be-9d10",
+  [31m│[0m [0m      "containerInfo": "hpe-ochamitest-92578414be-9d10",
+  [31m│[0m [0m      "service": "compute.googleapis.com",
+  [31m│[0m [0m      "serviceTitle": "Compute Engine API"
+  [31m│[0m [0m    },
+  [31m│[0m [0m    "reason": "SERVICE_DISABLED"
+  [31m│[0m [0m  },
+  [31m│[0m [0m  {
+  [31m│[0m [0m    "@type": "type.googleapis.com/google.rpc.LocalizedMessage",
+  [31m│[0m [0m    "locale": "en-US",
+  [31m│[0m [0m    "message": "Compute Engine API has not been used in project hpe-ochamitest-92578414be-9d10 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=hpe-ochamitest-92578414be-9d10 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry."
+  [31m│[0m [0m  },
+  [31m│[0m [0m  {
+  [31m│[0m [0m    "@type": "type.googleapis.com/google.rpc.Help",
+  [31m│[0m [0m    "links": [
+  [31m│[0m [0m      {
+  [31m│[0m [0m        "description": "Google developers console API activation",
+  [31m│[0m [0m        "url": "https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=hpe-ochamitest-92578414be-9d10"
+  [31m│[0m [0m      }
+  [31m│[0m [0m    ]
+  [31m│[0m [0m  }
+  [31m│[0m [0m]
+  [31m│[0m [0m, accessNotConfigured[0m
+  [31m│[0m [0m
+  [31m│[0m [0m[0m  with module.project-factory.google_project.main,
+  [31m│[0m [0m  on modules/core_project_factory/main.tf line 73, in resource "google_project" "main":
+  [31m│[0m [0m  73: resource "google_project" "main" [4m{[0m[0m
+  [31m│[0m [0m
+  [31m╵[0m[0m
+  
+  exit status 1
+
+* Failed to execute "terraform apply -auto-approve -input=false" in ./system/project/deploy/.terragrunt-cache/XNnv4flPz0Aq-8Vymmmpid5tQwM/YDEfvRwJmwIVpFBvl0NyRB7KFiQ
+  [31m╷[0m[0m
+  [31m│[0m [0m[1m[31mError: [0m[0m[1mError deleting default network in project hpe-ochamitest-92578414be-9d10: Error waiting for Deleting Firewall: error while retrieving operation: googleapi: Error 403: Compute Engine API has not been used in project hpe-ochamitest-92578414be-9d10 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=hpe-ochamitest-92578414be-9d10 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.
+  [31m│[0m [0mDetails:
+  [31m│[0m [0m[
+  [31m│[0m [0m  {
+  [31m│[0m [0m    "@type": "type.googleapis.com/google.rpc.ErrorInfo",
+  [31m│[0m [0m    "domain": "googleapis.com",
+  [31m│[0m [0m    "metadata": {
+  [31m│[0m [0m      "activationUrl": "https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=hpe-ochamitest-92578414be-9d10",
+  [31m│[0m [0m      "consumer": "projects/hpe-ochamitest-92578414be-9d10",
+  [31m│[0m [0m      "containerInfo": "hpe-ochamitest-92578414be-9d10",
+  [31m│[0m [0m      "service": "compute.googleapis.com",
+  [31m│[0m [0m      "serviceTitle": "Compute Engine API"
+  [31m│[0m [0m    },
+  [31m│[0m [0m    "reason": "SERVICE_DISABLED"
+  [31m│[0m [0m  },
+  [31m│[0m [0m  {
+  [31m│[0m [0m    "@type": "type.googleapis.com/google.rpc.LocalizedMessage",
+  [31m│[0m [0m    "locale": "en-US",
+  [31m│[0m [0m    "message": "Compute Engine API has not been used in project hpe-ochamitest-92578414be-9d10 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=hpe-ochamitest-92578414be-9d10 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry."
+  [31m│[0m [0m  },
+  [31m│[0m [0m  {
+  [31m│[0m [0m    "@type": "type.googleapis.com/google.rpc.Help",
+  [31m│[0m [0m    "links": [
+  [31m│[0m [0m      {
+  [31m│[0m [0m        "description": "Google developers console API activation",
+  [31m│[0m [0m        "url": "https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=hpe-ochamitest-92578414be-9d10"
+  [31m│[0m [0m      }
+  [31m│[0m [0m    ]
+  [31m│[0m [0m  }
+  [31m│[0m [0m]
+  [31m│[0m [0m, accessNotConfigured[0m
+  [31m│[0m [0m
+  [31m│[0m [0m[0m  with module.project-factory.google_project.main,
+  [31m│[0m [0m  on modules/core_project_factory/main.tf line 73, in resource "google_project" "main":
+  [31m│[0m [0m  73: resource "google_project" "main" [4m{[0m[0m
+  [31m│[0m [0m
+  [31m╵[0m[0m
+  
+  exit status 1
+
+* Failed to execute "terraform apply -auto-approve -input=false" in ./system/project/deploy/.terragrunt-cache/XNnv4flPz0Aq-8Vymmmpid5tQwM/YDEfvRwJmwIVpFBvl0NyRB7KFiQ
+  [31m╷[0m[0m
+  [31m│[0m [0m[1m[31mError: [0m[0m[1mError deleting default network in project hpe-ochamitest-92578414be-9d10: Error waiting for Deleting Firewall: error while retrieving operation: googleapi: Error 403: Compute Engine API has not been used in project hpe-ochamitest-92578414be-9d10 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=hpe-ochamitest-92578414be-9d10 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.
+  [31m│[0m [0mDetails:
+  [31m│[0m [0m[
+  [31m│[0m [0m  {
+  [31m│[0m [0m    "@type": "type.googleapis.com/google.rpc.ErrorInfo",
+  [31m│[0m [0m    "domain": "googleapis.com",
+  [31m│[0m [0m    "metadata": {
+  [31m│[0m [0m      "activationUrl": "https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=hpe-ochamitest-92578414be-9d10",
+  [31m│[0m [0m      "consumer": "projects/hpe-ochamitest-92578414be-9d10",
+  [31m│[0m [0m      "containerInfo": "hpe-ochamitest-92578414be-9d10",
+  [31m│[0m [0m      "service": "compute.googleapis.com",
+  [31m│[0m [0m      "serviceTitle": "Compute Engine API"
+  [31m│[0m [0m    },
+  [31m│[0m [0m    "reason": "SERVICE_DISABLED"
+  [31m│[0m [0m  },
+  [31m│[0m [0m  {
+  [31m│[0m [0m    "@type": "type.googleapis.com/google.rpc.LocalizedMessage",
+  [31m│[0m [0m    "locale": "en-US",
+  [31m│[0m [0m    "message": "Compute Engine API has not been used in project hpe-ochamitest-92578414be-9d10 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=hpe-ochamitest-92578414be-9d10 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry."
+  [31m│[0m [0m  },
+  [31m│[0m [0m  {
+  [31m│[0m [0m    "@type": "type.googleapis.com/google.rpc.Help",
+  [31m│[0m [0m    "links": [
+  [31m│[0m [0m      {
+  [31m│[0m [0m        "description": "Google developers console API activation",
+  [31m│[0m [0m        "url": "https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=hpe-ochamitest-92578414be-9d10"
+  [31m│[0m [0m      }
+  [31m│[0m [0m    ]
+  [31m│[0m [0m  }
+  [31m│[0m [0m]
+  [31m│[0m [0m, accessNotConfigured[0m
+  [31m│[0m [0m
+  [31m│[0m [0m[0m  with module.project-factory.google_project.main,
+  [31m│[0m [0m  on modules/core_project_factory/main.tf line 73, in resource "google_project" "main":
+  [31m│[0m [0m  73: resource "google_project" "main" [4m{[0m[0m
+  [31m│[0m [0m
+  [31m╵[0m[0m
+  
+  exit status 1
+
+* Failed to execute "terraform apply -auto-approve -input=false" in ./system/project/deploy/.terragrunt-cache/XNnv4flPz0Aq-8Vymmmpid5tQwM/YDEfvRwJmwIVpFBvl0NyRB7KFiQ
+  [31m╷[0m[0m
+  [31m│[0m [0m[1m[31mError: [0m[0m[1mError deleting default network in project hpe-ochamitest-92578414be-9d10: Error waiting for Deleting Firewall: error while retrieving operation: googleapi: Error 403: Compute Engine API has not been used in project hpe-ochamitest-92578414be-9d10 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=hpe-ochamitest-92578414be-9d10 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.
+  [31m│[0m [0mDetails:
+  [31m│[0m [0m[
+  [31m│[0m [0m  {
+  [31m│[0m [0m    "@type": "type.googleapis.com/google.rpc.ErrorInfo",
+  [31m│[0m [0m    "domain": "googleapis.com",
+  [31m│[0m [0m    "metadata": {
+  [31m│[0m [0m      "activationUrl": "https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=hpe-ochamitest-92578414be-9d10",
+  [31m│[0m [0m      "consumer": "projects/hpe-ochamitest-92578414be-9d10",
+  [31m│[0m [0m      "containerInfo": "hpe-ochamitest-92578414be-9d10",
+  [31m│[0m [0m      "service": "compute.googleapis.com",
+  [31m│[0m [0m      "serviceTitle": "Compute Engine API"
+  [31m│[0m [0m    },
+  [31m│[0m [0m    "reason": "SERVICE_DISABLED"
+  [31m│[0m [0m  },
+  [31m│[0m [0m  {
+  [31m│[0m [0m    "@type": "type.googleapis.com/google.rpc.LocalizedMessage",
+  [31m│[0m [0m    "locale": "en-US",
+  [31m│[0m [0m    "message": "Compute Engine API has not been used in project hpe-ochamitest-92578414be-9d10 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=hpe-ochamitest-92578414be-9d10 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry."
+  [31m│[0m [0m  },
+  [31m│[0m [0m  {
+  [31m│[0m [0m    "@type": "type.googleapis.com/google.rpc.Help",
+  [31m│[0m [0m    "links": [
+  [31m│[0m [0m      {
+  [31m│[0m [0m        "description": "Google developers console API activation",
+  [31m│[0m [0m        "url": "https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=hpe-ochamitest-92578414be-9d10"
+  [31m│[0m [0m      }
+  [31m│[0m [0m    ]
+  [31m│[0m [0m  }
+  [31m│[0m [0m]
+  [31m│[0m [0m, accessNotConfigured[0m
+  [31m│[0m [0m
+  [31m│[0m [0m[0m  with module.project-factory.google_project.main,
+  [31m│[0m [0m  on modules/core_project_factory/main.tf line 73, in resource "google_project" "main":
+  [31m│[0m [0m  73: resource "google_project" "main" [4m{[0m[0m
+  [31m│[0m [0m
+  [31m╵[0m[0m
+  
+  exit status 1
+
+* Failed to execute "terraform apply -auto-approve -input=false" in ./system/project/deploy/.terragrunt-cache/XNnv4flPz0Aq-8Vymmmpid5tQwM/YDEfvRwJmwIVpFBvl0NyRB7KFiQ
+  [31m╷[0m[0m
+  [31m│[0m [0m[1m[31mError: [0m[0m[1mError deleting default network in project hpe-ochamitest-92578414be-9d10: Error waiting for Deleting Firewall: error while retrieving operation: googleapi: Error 403: Compute Engine API has not been used in project hpe-ochamitest-92578414be-9d10 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=hpe-ochamitest-92578414be-9d10 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.
+  [31m│[0m [0mDetails:
+  [31m│[0m [0m[
+  [31m│[0m [0m  {
+  [31m│[0m [0m    "@type": "type.googleapis.com/google.rpc.ErrorInfo",
+  [31m│[0m [0m    "domain": "googleapis.com",
+  [31m│[0m [0m    "metadata": {
+  [31m│[0m [0m      "activationUrl": "https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=hpe-ochamitest-92578414be-9d10",
+  [31m│[0m [0m      "consumer": "projects/hpe-ochamitest-92578414be-9d10",
+  [31m│[0m [0m      "containerInfo": "hpe-ochamitest-92578414be-9d10",
+  [31m│[0m [0m      "service": "compute.googleapis.com",
+  [31m│[0m [0m      "serviceTitle": "Compute Engine API"
+  [31m│[0m [0m    },
+  [31m│[0m [0m    "reason": "SERVICE_DISABLED"
+  [31m│[0m [0m  },
+  [31m│[0m [0m  {
+  [31m│[0m [0m    "@type": "type.googleapis.com/google.rpc.LocalizedMessage",
+  [31m│[0m [0m    "locale": "en-US",
+  [31m│[0m [0m    "message": "Compute Engine API has not been used in project hpe-ochamitest-92578414be-9d10 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=hpe-ochamitest-92578414be-9d10 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry."
+  [31m│[0m [0m  },
+  [31m│[0m [0m  {
+  [31m│[0m [0m    "@type": "type.googleapis.com/google.rpc.Help",
+  [31m│[0m [0m    "links": [
+  [31m│[0m [0m      {
+  [31m│[0m [0m        "description": "Google developers console API activation",
+  [31m│[0m [0m        "url": "https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=hpe-ochamitest-92578414be-9d10"
+  [31m│[0m [0m      }
+  [31m│[0m [0m    ]
+  [31m│[0m [0m  }
+  [31m│[0m [0m]
+  [31m│[0m [0m, accessNotConfigured[0m
+  [31m│[0m [0m
+  [31m│[0m [0m[0m  with module.project-factory.google_project.main,
+  [31m│[0m [0m  on modules/core_project_factory/main.tf line 73, in resource "google_project" "main":
+  [31m│[0m [0m  73: resource "google_project" "main" [4m{[0m[0m
+  [31m│[0m [0m
+  [31m╵[0m[0m
+  
+  exit status 1
+
+* Failed to execute "terraform apply -auto-approve -input=false" in ./system/project/deploy/.terragrunt-cache/XNnv4flPz0Aq-8Vymmmpid5tQwM/YDEfvRwJmwIVpFBvl0NyRB7KFiQ
+  [31m╷[0m[0m
+  [31m│[0m [0m[1m[31mError: [0m[0m[1mError deleting default network in project hpe-ochamitest-92578414be-9d10: Error waiting for Deleting Firewall: error while retrieving operation: googleapi: Error 403: Compute Engine API has not been used in project hpe-ochamitest-92578414be-9d10 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=hpe-ochamitest-92578414be-9d10 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.
+  [31m│[0m [0mDetails:
+  [31m│[0m [0m[
+  [31m│[0m [0m  {
+  [31m│[0m [0m    "@type": "type.googleapis.com/google.rpc.ErrorInfo",
+  [31m│[0m [0m    "domain": "googleapis.com",
+  [31m│[0m [0m    "metadata": {
+  [31m│[0m [0m      "activationUrl": "https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=hpe-ochamitest-92578414be-9d10",
+  [31m│[0m [0m      "consumer": "projects/hpe-ochamitest-92578414be-9d10",
+  [31m│[0m [0m      "containerInfo": "hpe-ochamitest-92578414be-9d10",
+  [31m│[0m [0m      "service": "compute.googleapis.com",
+  [31m│[0m [0m      "serviceTitle": "Compute Engine API"
+  [31m│[0m [0m    },
+  [31m│[0m [0m    "reason": "SERVICE_DISABLED"
+  [31m│[0m [0m  },
+  [31m│[0m [0m  {
+  [31m│[0m [0m    "@type": "type.googleapis.com/google.rpc.LocalizedMessage",
+  [31m│[0m [0m    "locale": "en-US",
+  [31m│[0m [0m    "message": "Compute Engine API has not been used in project hpe-ochamitest-92578414be-9d10 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=hpe-ochamitest-92578414be-9d10 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry."
+  [31m│[0m [0m  },
+  [31m│[0m [0m  {
+  [31m│[0m [0m    "@type": "type.googleapis.com/google.rpc.Help",
+  [31m│[0m [0m    "links": [
+  [31m│[0m [0m      {
+  [31m│[0m [0m        "description": "Google developers console API activation",
+  [31m│[0m [0m        "url": "https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=hpe-ochamitest-92578414be-9d10"
+  [31m│[0m [0m      }
+  [31m│[0m [0m    ]
+  [31m│[0m [0m  }
+  [31m│[0m [0m]
+  [31m│[0m [0m, accessNotConfigured[0m
+  [31m│[0m [0m
+  [31m│[0m [0m[0m  with module.project-factory.google_project.main,
+  [31m│[0m [0m  on modules/core_project_factory/main.tf line 73, in resource "google_project" "main":
+  [31m│[0m [0m  73: resource "google_project" "main" [4m{[0m[0m
+  [31m│[0m [0m
+  [31m╵[0m[0m
+  
+  exit status 1
+
+* Failed to execute "terraform apply -auto-approve -input=false" in ./system/project/deploy/.terragrunt-cache/XNnv4flPz0Aq-8Vymmmpid5tQwM/YDEfvRwJmwIVpFBvl0NyRB7KFiQ
+  [31m╷[0m[0m
+  [31m│[0m [0m[1m[31mError: [0m[0m[1mError deleting default network in project hpe-ochamitest-92578414be-9d10: Error waiting for Deleting Firewall: error while retrieving operation: googleapi: Error 403: Compute Engine API has not been used in project hpe-ochamitest-92578414be-9d10 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=hpe-ochamitest-92578414be-9d10 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.
+  [31m│[0m [0mDetails:
+  [31m│[0m [0m[
+  [31m│[0m [0m  {
+  [31m│[0m [0m    "@type": "type.googleapis.com/google.rpc.ErrorInfo",
+  [31m│[0m [0m    "domain": "googleapis.com",
+  [31m│[0m [0m    "metadata": {
+  [31m│[0m [0m      "activationUrl": "https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=hpe-ochamitest-92578414be-9d10",
+  [31m│[0m [0m      "consumer": "projects/hpe-ochamitest-92578414be-9d10",
+  [31m│[0m [0m      "containerInfo": "hpe-ochamitest-92578414be-9d10",
+  [31m│[0m [0m      "service": "compute.googleapis.com",
+  [31m│[0m [0m      "serviceTitle": "Compute Engine API"
+  [31m│[0m [0m    },
+  [31m│[0m [0m    "reason": "SERVICE_DISABLED"
+  [31m│[0m [0m  },
+  [31m│[0m [0m  {
+  [31m│[0m [0m    "@type": "type.googleapis.com/google.rpc.LocalizedMessage",
+  [31m│[0m [0m    "locale": "en-US",
+  [31m│[0m [0m    "message": "Compute Engine API has not been used in project hpe-ochamitest-92578414be-9d10 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=hpe-ochamitest-92578414be-9d10 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry."
+  [31m│[0m [0m  },
+  [31m│[0m [0m  {
+  [31m│[0m [0m    "@type": "type.googleapis.com/google.rpc.Help",
+  [31m│[0m [0m    "links": [
+  [31m│[0m [0m      {
+  [31m│[0m [0m        "description": "Google developers console API activation",
+  [31m│[0m [0m        "url": "https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=hpe-ochamitest-92578414be-9d10"
+  [31m│[0m [0m      }
+  [31m│[0m [0m    ]
+  [31m│[0m [0m  }
+  [31m│[0m [0m]
+  [31m│[0m [0m, accessNotConfigured[0m
+  [31m│[0m [0m
+  [31m│[0m [0m[0m  with module.project-factory.google_project.main,
+  [31m│[0m [0m  on modules/core_project_factory/main.tf line 73, in resource "google_project" "main":
+  [31m│[0m [0m  73: resource "google_project" "main" [4m{[0m[0m
+  [31m│[0m [0m
+  [31m╵[0m[0m
+  
+  exit status 1
+
+* Failed to execute "terraform apply -auto-approve -input=false" in ./system/project/deploy/.terragrunt-cache/XNnv4flPz0Aq-8Vymmmpid5tQwM/YDEfvRwJmwIVpFBvl0NyRB7KFiQ
+  [31m╷[0m[0m
+  [31m│[0m [0m[1m[31mError: [0m[0m[1mError deleting default network in project hpe-ochamitest-92578414be-9d10: Error waiting for Deleting Firewall: error while retrieving operation: googleapi: Error 403: Compute Engine API has not been used in project hpe-ochamitest-92578414be-9d10 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=hpe-ochamitest-92578414be-9d10 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.
+  [31m│[0m [0mDetails:
+  [31m│[0m [0m[
+  [31m│[0m [0m  {
+  [31m│[0m [0m    "@type": "type.googleapis.com/google.rpc.ErrorInfo",
+  [31m│[0m [0m    "domain": "googleapis.com",
+  [31m│[0m [0m    "metadata": {
+  [31m│[0m [0m      "activationUrl": "https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=hpe-ochamitest-92578414be-9d10",
+  [31m│[0m [0m      "consumer": "projects/hpe-ochamitest-92578414be-9d10",
+  [31m│[0m [0m      "containerInfo": "hpe-ochamitest-92578414be-9d10",
+  [31m│[0m [0m      "service": "compute.googleapis.com",
+  [31m│[0m [0m      "serviceTitle": "Compute Engine API"
+  [31m│[0m [0m    },
+  [31m│[0m [0m    "reason": "SERVICE_DISABLED"
+  [31m│[0m [0m  },
+  [31m│[0m [0m  {
+  [31m│[0m [0m    "@type": "type.googleapis.com/google.rpc.LocalizedMessage",
+  [31m│[0m [0m    "locale": "en-US",
+  [31m│[0m [0m    "message": "Compute Engine API has not been used in project hpe-ochamitest-92578414be-9d10 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=hpe-ochamitest-92578414be-9d10 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry."
+  [31m│[0m [0m  },
+  [31m│[0m [0m  {
+  [31m│[0m [0m    "@type": "type.googleapis.com/google.rpc.Help",
+  [31m│[0m [0m    "links": [
+  [31m│[0m [0m      {
+  [31m│[0m [0m        "description": "Google developers console API activation",
+  [31m│[0m [0m        "url": "https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=hpe-ochamitest-92578414be-9d10"
+  [31m│[0m [0m      }
+  [31m│[0m [0m    ]
+  [31m│[0m [0m  }
+  [31m│[0m [0m]
+  [31m│[0m [0m, accessNotConfigured[0m
+  [31m│[0m [0m
+  [31m│[0m [0m[0m  with module.project-factory.google_project.main,
+  [31m│[0m [0m  on modules/core_project_factory/main.tf line 73, in resource "google_project" "main":
+  [31m│[0m [0m  73: resource "google_project" "main" [4m{[0m[0m
+  [31m│[0m [0m
+  [31m╵[0m[0m
+  
+  exit status 1
+
+* Failed to execute "terraform apply -auto-approve -input=false" in ./system/project/deploy/.terragrunt-cache/XNnv4flPz0Aq-8Vymmmpid5tQwM/YDEfvRwJmwIVpFBvl0NyRB7KFiQ
+  [31m╷[0m[0m
+  [31m│[0m [0m[1m[31mError: [0m[0m[1mError deleting default network in project hpe-ochamitest-92578414be-9d10: Error waiting for Deleting Firewall: error while retrieving operation: googleapi: Error 403: Compute Engine API has not been used in project hpe-ochamitest-92578414be-9d10 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=hpe-ochamitest-92578414be-9d10 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.
+  [31m│[0m [0mDetails:
+  [31m│[0m [0m[
+  [31m│[0m [0m  {
+  [31m│[0m [0m    "@type": "type.googleapis.com/google.rpc.ErrorInfo",
+  [31m│[0m [0m    "domain": "googleapis.com",
+  [31m│[0m [0m    "metadata": {
+  [31m│[0m [0m      "activationUrl": "https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=hpe-ochamitest-92578414be-9d10",
+  [31m│[0m [0m      "consumer": "projects/hpe-ochamitest-92578414be-9d10",
+  [31m│[0m [0m      "containerInfo": "hpe-ochamitest-92578414be-9d10",
+  [31m│[0m [0m      "service": "compute.googleapis.com",
+  [31m│[0m [0m      "serviceTitle": "Compute Engine API"
+  [31m│[0m [0m    },
+  [31m│[0m [0m    "reason": "SERVICE_DISABLED"
+  [31m│[0m [0m  },
+  [31m│[0m [0m  {
+  [31m│[0m [0m    "@type": "type.googleapis.com/google.rpc.LocalizedMessage",
+  [31m│[0m [0m    "locale": "en-US",
+  [31m│[0m [0m    "message": "Compute Engine API has not been used in project hpe-ochamitest-92578414be-9d10 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=hpe-ochamitest-92578414be-9d10 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry."
+  [31m│[0m [0m  },
+  [31m│[0m [0m  {
+  [31m│[0m [0m    "@type": "type.googleapis.com/google.rpc.Help",
+  [31m│[0m [0m    "links": [
+  [31m│[0m [0m      {
+  [31m│[0m [0m        "description": "Google developers console API activation",
+  [31m│[0m [0m        "url": "https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=hpe-ochamitest-92578414be-9d10"
+  [31m│[0m [0m      }
+  [31m│[0m [0m    ]
+  [31m│[0m [0m  }
+  [31m│[0m [0m]
+  [31m│[0m [0m, accessNotConfigured[0m
+  [31m│[0m [0m
+  [31m│[0m [0m[0m  with module.project-factory.google_project.main,
+  [31m│[0m [0m  on modules/core_project_factory/main.tf line 73, in resource "google_project" "main":
+  [31m│[0m [0m  73: resource "google_project" "main" [4m{[0m[0m
+  [31m│[0m [0m
+  [31m╵[0m[0m
+  
+  exit status 1
+
+* Failed to execute "terraform apply -auto-approve -input=false" in ./system/project/deploy/.terragrunt-cache/XNnv4flPz0Aq-8Vymmmpid5tQwM/YDEfvRwJmwIVpFBvl0NyRB7KFiQ
+  [31m╷[0m[0m
+  [31m│[0m [0m[1m[31mError: [0m[0m[1mError deleting default network in project hpe-ochamitest-92578414be-9d10: Error waiting for Deleting Firewall: error while retrieving operation: googleapi: Error 403: Compute Engine API has not been used in project hpe-ochamitest-92578414be-9d10 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=hpe-ochamitest-92578414be-9d10 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.
+  [31m│[0m [0mDetails:
+  [31m│[0m [0m[
+  [31m│[0m [0m  {
+  [31m│[0m [0m    "@type": "type.googleapis.com/google.rpc.ErrorInfo",
+  [31m│[0m [0m    "domain": "googleapis.com",
+  [31m│[0m [0m    "metadata": {
+  [31m│[0m [0m      "activationUrl": "https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=hpe-ochamitest-92578414be-9d10",
+  [31m│[0m [0m      "consumer": "projects/hpe-ochamitest-92578414be-9d10",
+  [31m│[0m [0m      "containerInfo": "hpe-ochamitest-92578414be-9d10",
+  [31m│[0m [0m      "service": "compute.googleapis.com",
+  [31m│[0m [0m      "serviceTitle": "Compute Engine API"
+  [31m│[0m [0m    },
+  [31m│[0m [0m    "reason": "SERVICE_DISABLED"
+  [31m│[0m [0m  },
+  [31m│[0m [0m  {
+  [31m│[0m [0m    "@type": "type.googleapis.com/google.rpc.LocalizedMessage",
+  [31m│[0m [0m    "locale": "en-US",
+  [31m│[0m [0m    "message": "Compute Engine API has not been used in project hpe-ochamitest-92578414be-9d10 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=hpe-ochamitest-92578414be-9d10 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry."
+  [31m│[0m [0m  },
+  [31m│[0m [0m  {
+  [31m│[0m [0m    "@type": "type.googleapis.com/google.rpc.Help",
+  [31m│[0m [0m    "links": [
+  [31m│[0m [0m      {
+  [31m│[0m [0m        "description": "Google developers console API activation",
+  [31m│[0m [0m        "url": "https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=hpe-ochamitest-92578414be-9d10"
+  [31m│[0m [0m      }
+  [31m│[0m [0m    ]
+  [31m│[0m [0m  }
+  [31m│[0m [0m]
+  [31m│[0m [0m, accessNotConfigured[0m
+  [31m│[0m [0m
+  [31m│[0m [0m[0m  with module.project-factory.google_project.main,
+  [31m│[0m [0m  on modules/core_project_factory/main.tf line 73, in resource "google_project" "main":
+  [31m│[0m [0m  73: resource "google_project" "main" [4m{[0m[0m
+  [31m│[0m [0m
+  [31m╵[0m[0m
+  
+  exit status 1
+
+* Failed to execute "terraform apply -auto-approve -input=false" in ./system/project/deploy/.terragrunt-cache/XNnv4flPz0Aq-8Vymmmpid5tQwM/YDEfvRwJmwIVpFBvl0NyRB7KFiQ
+  [31m╷[0m[0m
+  [31m│[0m [0m[1m[31mError: [0m[0m[1mError deleting default network in project hpe-ochamitest-92578414be-9d10: Error waiting for Deleting Firewall: error while retrieving operation: googleapi: Error 403: Compute Engine API has not been used in project hpe-ochamitest-92578414be-9d10 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=hpe-ochamitest-92578414be-9d10 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.
+  [31m│[0m [0mDetails:
+  [31m│[0m [0m[
+  [31m│[0m [0m  {
+  [31m│[0m [0m    "@type": "type.googleapis.com/google.rpc.ErrorInfo",
+  [31m│[0m [0m    "domain": "googleapis.com",
+  [31m│[0m [0m    "metadata": {
+  [31m│[0m [0m      "activationUrl": "https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=hpe-ochamitest-92578414be-9d10",
+  [31m│[0m [0m      "consumer": "projects/hpe-ochamitest-92578414be-9d10",
+  [31m│[0m [0m      "containerInfo": "hpe-ochamitest-92578414be-9d10",
+  [31m│[0m [0m      "service": "compute.googleapis.com",
+  [31m│[0m [0m      "serviceTitle": "Compute Engine API"
+  [31m│[0m [0m    },
+  [31m│[0m [0m    "reason": "SERVICE_DISABLED"
+  [31m│[0m [0m  },
+  [31m│[0m [0m  {
+  [31m│[0m [0m    "@type": "type.googleapis.com/google.rpc.LocalizedMessage",
+  [31m│[0m [0m    "locale": "en-US",
+  [31m│[0m [0m    "message": "Compute Engine API has not been used in project hpe-ochamitest-92578414be-9d10 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=hpe-ochamitest-92578414be-9d10 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry."
+  [31m│[0m [0m  },
+  [31m│[0m [0m  {
+  [31m│[0m [0m    "@type": "type.googleapis.com/google.rpc.Help",
+  [31m│[0m [0m    "links": [
+  [31m│[0m [0m      {
+  [31m│[0m [0m        "description": "Google developers console API activation",
+  [31m│[0m [0m        "url": "https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=hpe-ochamitest-92578414be-9d10"
+  [31m│[0m [0m      }
+  [31m│[0m [0m    ]
+  [31m│[0m [0m  }
+  [31m│[0m [0m]
+  [31m│[0m [0m, accessNotConfigured[0m
+  [31m│[0m [0m
+  [31m│[0m [0m[0m  with module.project-factory.google_project.main,
+  [31m│[0m [0m  on modules/core_project_factory/main.tf line 73, in resource "google_project" "main":
+  [31m│[0m [0m  73: resource "google_project" "main" [4m{[0m[0m
+  [31m│[0m [0m
+  [31m╵[0m[0m
+  
+  exit status 1
+
+* Failed to execute "terraform apply -auto-approve -input=false" in ./system/project/deploy/.terragrunt-cache/XNnv4flPz0Aq-8Vymmmpid5tQwM/YDEfvRwJmwIVpFBvl0NyRB7KFiQ
+  [31m╷[0m[0m
+  [31m│[0m [0m[1m[31mError: [0m[0m[1mError deleting default network in project hpe-ochamitest-92578414be-9d10: Error waiting for Deleting Firewall: error while retrieving operation: googleapi: Error 403: Compute Engine API has not been used in project hpe-ochamitest-92578414be-9d10 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=hpe-ochamitest-92578414be-9d10 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.
+  [31m│[0m [0mDetails:
+  [31m│[0m [0m[
+  [31m│[0m [0m  {
+  [31m│[0m [0m    "@type": "type.googleapis.com/google.rpc.ErrorInfo",
+  [31m│[0m [0m    "domain": "googleapis.com",
+  [31m│[0m [0m    "metadata": {
+  [31m│[0m [0m      "activationUrl": "https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=hpe-ochamitest-92578414be-9d10",
+  [31m│[0m [0m      "consumer": "projects/hpe-ochamitest-92578414be-9d10",
+  [31m│[0m [0m      "containerInfo": "hpe-ochamitest-92578414be-9d10",
+  [31m│[0m [0m      "service": "compute.googleapis.com",
+  [31m│[0m [0m      "serviceTitle": "Compute Engine API"
+  [31m│[0m [0m    },
+  [31m│[0m [0m    "reason": "SERVICE_DISABLED"
+  [31m│[0m [0m  },
+  [31m│[0m [0m  {
+  [31m│[0m [0m    "@type": "type.googleapis.com/google.rpc.LocalizedMessage",
+  [31m│[0m [0m    "locale": "en-US",
+  [31m│[0m [0m    "message": "Compute Engine API has not been used in project hpe-ochamitest-92578414be-9d10 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=hpe-ochamitest-92578414be-9d10 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry."
+  [31m│[0m [0m  },
+  [31m│[0m [0m  {
+  [31m│[0m [0m    "@type": "type.googleapis.com/google.rpc.Help",
+  [31m│[0m [0m    "links": [
+  [31m│[0m [0m      {
+  [31m│[0m [0m        "description": "Google developers console API activation",
+  [31m│[0m [0m        "url": "https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=hpe-ochamitest-92578414be-9d10"
+  [31m│[0m [0m      }
+  [31m│[0m [0m    ]
+  [31m│[0m [0m  }
+  [31m│[0m [0m]
+  [31m│[0m [0m, accessNotConfigured[0m
+  [31m│[0m [0m
+  [31m│[0m [0m[0m  with module.project-factory.google_project.main,
+  [31m│[0m [0m  on modules/core_project_factory/main.tf line 73, in resource "google_project" "main":
+  [31m│[0m [0m  73: resource "google_project" "main" [4m{[0m[0m
+  [31m│[0m [0m
+  [31m╵[0m[0m
+  
+  exit status 1
+
+* Failed to execute "terraform apply -auto-approve -input=false" in ./system/project/deploy/.terragrunt-cache/XNnv4flPz0Aq-8Vymmmpid5tQwM/YDEfvRwJmwIVpFBvl0NyRB7KFiQ
+  [31m╷[0m[0m
+  [31m│[0m [0m[1m[31mError: [0m[0m[1mError deleting default network in project hpe-ochamitest-92578414be-9d10: Error waiting for Deleting Firewall: error while retrieving operation: googleapi: Error 403: Compute Engine API has not been used in project hpe-ochamitest-92578414be-9d10 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=hpe-ochamitest-92578414be-9d10 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.
+  [31m│[0m [0mDetails:
+  [31m│[0m [0m[
+  [31m│[0m [0m  {
+  [31m│[0m [0m    "@type": "type.googleapis.com/google.rpc.ErrorInfo",
+  [31m│[0m [0m    "domain": "googleapis.com",
+  [31m│[0m [0m    "metadata": {
+  [31m│[0m [0m      "activationUrl": "https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=hpe-ochamitest-92578414be-9d10",
+  [31m│[0m [0m      "consumer": "projects/hpe-ochamitest-92578414be-9d10",
+  [31m│[0m [0m      "containerInfo": "hpe-ochamitest-92578414be-9d10",
+  [31m│[0m [0m      "service": "compute.googleapis.com",
+  [31m│[0m [0m      "serviceTitle": "Compute Engine API"
+  [31m│[0m [0m    },
+  [31m│[0m [0m    "reason": "SERVICE_DISABLED"
+  [31m│[0m [0m  },
+  [31m│[0m [0m  {
+  [31m│[0m [0m    "@type": "type.googleapis.com/google.rpc.LocalizedMessage",
+  [31m│[0m [0m    "locale": "en-US",
+  [31m│[0m [0m    "message": "Compute Engine API has not been used in project hpe-ochamitest-92578414be-9d10 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=hpe-ochamitest-92578414be-9d10 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry."
+  [31m│[0m [0m  },
+  [31m│[0m [0m  {
+  [31m│[0m [0m    "@type": "type.googleapis.com/google.rpc.Help",
+  [31m│[0m [0m    "links": [
+  [31m│[0m [0m      {
+  [31m│[0m [0m        "description": "Google developers console API activation",
+  [31m│[0m [0m        "url": "https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=hpe-ochamitest-92578414be-9d10"
+  [31m│[0m [0m      }
+  [31m│[0m [0m    ]
+  [31m│[0m [0m  }
+  [31m│[0m [0m]
+  [31m│[0m [0m, accessNotConfigured[0m
+  [31m│[0m [0m
+  [31m│[0m [0m[0m  with module.project-factory.google_project.main,
+  [31m│[0m [0m  on modules/core_project_factory/main.tf line 73, in resource "google_project" "main":
+  [31m│[0m [0m  73: resource "google_project" "main" [4m{[0m[0m
+  [31m│[0m [0m
+  [31m╵[0m[0m
+  
+  exit status 1
+
+* Failed to execute "terraform apply -auto-approve -input=false" in ./system/project/deploy/.terragrunt-cache/XNnv4flPz0Aq-8Vymmmpid5tQwM/YDEfvRwJmwIVpFBvl0NyRB7KFiQ
+  [31m╷[0m[0m
+  [31m│[0m [0m[1m[31mError: [0m[0m[1mError deleting default network in project hpe-ochamitest-92578414be-9d10: Error waiting for Deleting Firewall: error while retrieving operation: googleapi: Error 403: Compute Engine API has not been used in project hpe-ochamitest-92578414be-9d10 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=hpe-ochamitest-92578414be-9d10 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.
+  [31m│[0m [0mDetails:
+  [31m│[0m [0m[
+  [31m│[0m [0m  {
+  [31m│[0m [0m    "@type": "type.googleapis.com/google.rpc.ErrorInfo",
+  [31m│[0m [0m    "domain": "googleapis.com",
+  [31m│[0m [0m    "metadata": {
+  [31m│[0m [0m      "activationUrl": "https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=hpe-ochamitest-92578414be-9d10",
+  [31m│[0m [0m      "consumer": "projects/hpe-ochamitest-92578414be-9d10",
+  [31m│[0m [0m      "containerInfo": "hpe-ochamitest-92578414be-9d10",
+  [31m│[0m [0m      "service": "compute.googleapis.com",
+  [31m│[0m [0m      "serviceTitle": "Compute Engine API"
+  [31m│[0m [0m    },
+  [31m│[0m [0m    "reason": "SERVICE_DISABLED"
+  [31m│[0m [0m  },
+  [31m│[0m [0m  {
+  [31m│[0m [0m    "@type": "type.googleapis.com/google.rpc.LocalizedMessage",
+  [31m│[0m [0m    "locale": "en-US",
+  [31m│[0m [0m    "message": "Compute Engine API has not been used in project hpe-ochamitest-92578414be-9d10 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=hpe-ochamitest-92578414be-9d10 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry."
+  [31m│[0m [0m  },
+  [31m│[0m [0m  {
+  [31m│[0m [0m    "@type": "type.googleapis.com/google.rpc.Help",
+  [31m│[0m [0m    "links": [
+  [31m│[0m [0m      {
+  [31m│[0m [0m        "description": "Google developers console API activation",
+  [31m│[0m [0m        "url": "https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=hpe-ochamitest-92578414be-9d10"
+  [31m│[0m [0m      }
+  [31m│[0m [0m    ]
+  [31m│[0m [0m  }
+  [31m│[0m [0m]
+  [31m│[0m [0m, accessNotConfigured[0m
+  [31m│[0m [0m
+  [31m│[0m [0m[0m  with module.project-factory.google_project.main,
+  [31m│[0m [0m  on modules/core_project_factory/main.tf line 73, in resource "google_project" "main":
+  [31m│[0m [0m  73: resource "google_project" "main" [4m{[0m[0m
+  [31m│[0m [0m
+  [31m╵[0m[0m
+  
+  exit status 1
+
+* Failed to execute "terraform apply -auto-approve -input=false" in ./system/project/deploy/.terragrunt-cache/XNnv4flPz0Aq-8Vymmmpid5tQwM/YDEfvRwJmwIVpFBvl0NyRB7KFiQ
+  [31m╷[0m[0m
+  [31m│[0m [0m[1m[31mError: [0m[0m[1mError deleting default network in project hpe-ochamitest-92578414be-9d10: Error waiting for Deleting Firewall: error while retrieving operation: googleapi: Error 403: Compute Engine API has not been used in project hpe-ochamitest-92578414be-9d10 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=hpe-ochamitest-92578414be-9d10 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.
+  [31m│[0m [0mDetails:
+  [31m│[0m [0m[
+  [31m│[0m [0m  {
+  [31m│[0m [0m    "@type": "type.googleapis.com/google.rpc.ErrorInfo",
+  [31m│[0m [0m    "domain": "googleapis.com",
+  [31m│[0m [0m    "metadata": {
+  [31m│[0m [0m      "activationUrl": "https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=hpe-ochamitest-92578414be-9d10",
+  [31m│[0m [0m      "consumer": "projects/hpe-ochamitest-92578414be-9d10",
+  [31m│[0m [0m      "containerInfo": "hpe-ochamitest-92578414be-9d10",
+  [31m│[0m [0m      "service": "compute.googleapis.com",
+  [31m│[0m [0m      "serviceTitle": "Compute Engine API"
+  [31m│[0m [0m    },
+  [31m│[0m [0m    "reason": "SERVICE_DISABLED"
+  [31m│[0m [0m  },
+  [31m│[0m [0m  {
+  [31m│[0m [0m    "@type": "type.googleapis.com/google.rpc.LocalizedMessage",
+  [31m│[0m [0m    "locale": "en-US",
+  [31m│[0m [0m    "message": "Compute Engine API has not been used in project hpe-ochamitest-92578414be-9d10 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=hpe-ochamitest-92578414be-9d10 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry."
+  [31m│[0m [0m  },
+  [31m│[0m [0m  {
+  [31m│[0m [0m    "@type": "type.googleapis.com/google.rpc.Help",
+  [31m│[0m [0m    "links": [
+  [31m│[0m [0m      {
+  [31m│[0m [0m        "description": "Google developers console API activation",
+  [31m│[0m [0m        "url": "https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=hpe-ochamitest-92578414be-9d10"
+  [31m│[0m [0m      }
+  [31m│[0m [0m    ]
+  [31m│[0m [0m  }
+  [31m│[0m [0m]
+  [31m│[0m [0m, accessNotConfigured[0m
+  [31m│[0m [0m
+  [31m│[0m [0m[0m  with module.project-factory.google_project.main,
+  [31m│[0m [0m  on modules/core_project_factory/main.tf line 73, in resource "google_project" "main":
+  [31m│[0m [0m  73: resource "google_project" "main" [4m{[0m[0m
+  [31m│[0m [0m
+  [31m╵[0m[0m
+  
+  exit status 1
+
+* Failed to execute "terraform apply -auto-approve -input=false" in ./system/project/deploy/.terragrunt-cache/XNnv4flPz0Aq-8Vymmmpid5tQwM/YDEfvRwJmwIVpFBvl0NyRB7KFiQ
+  [31m╷[0m[0m
+  [31m│[0m [0m[1m[31mError: [0m[0m[1mError deleting default network in project hpe-ochamitest-92578414be-9d10: Error waiting for Deleting Firewall: error while retrieving operation: googleapi: Error 403: Compute Engine API has not been used in project hpe-ochamitest-92578414be-9d10 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=hpe-ochamitest-92578414be-9d10 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.
+  [31m│[0m [0mDetails:
+  [31m│[0m [0m[
+  [31m│[0m [0m  {
+  [31m│[0m [0m    "@type": "type.googleapis.com/google.rpc.ErrorInfo",
+  [31m│[0m [0m    "domain": "googleapis.com",
+  [31m│[0m [0m    "metadata": {
+  [31m│[0m [0m      "activationUrl": "https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=hpe-ochamitest-92578414be-9d10",
+  [31m│[0m [0m      "consumer": "projects/hpe-ochamitest-92578414be-9d10",
+  [31m│[0m [0m      "containerInfo": "hpe-ochamitest-92578414be-9d10",
+  [31m│[0m [0m      "service": "compute.googleapis.com",
+  [31m│[0m [0m      "serviceTitle": "Compute Engine API"
+  [31m│[0m [0m    },
+  [31m│[0m [0m    "reason": "SERVICE_DISABLED"
+  [31m│[0m [0m  },
+  [31m│[0m [0m  {
+  [31m│[0m [0m    "@type": "type.googleapis.com/google.rpc.LocalizedMessage",
+  [31m│[0m [0m    "locale": "en-US",
+  [31m│[0m [0m    "message": "Compute Engine API has not been used in project hpe-ochamitest-92578414be-9d10 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=hpe-ochamitest-92578414be-9d10 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry."
+  [31m│[0m [0m  },
+  [31m│[0m [0m  {
+  [31m│[0m [0m    "@type": "type.googleapis.com/google.rpc.Help",
+  [31m│[0m [0m    "links": [
+  [31m│[0m [0m      {
+  [31m│[0m [0m        "description": "Google developers console API activation",
+  [31m│[0m [0m        "url": "https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=hpe-ochamitest-92578414be-9d10"
+  [31m│[0m [0m      }
+  [31m│[0m [0m    ]
+  [31m│[0m [0m  }
+  [31m│[0m [0m]
+  [31m│[0m [0m, accessNotConfigured[0m
+  [31m│[0m [0m
+  [31m│[0m [0m[0m  with module.project-factory.google_project.main,
+  [31m│[0m [0m  on modules/core_project_factory/main.tf line 73, in resource "google_project" "main":
+  [31m│[0m [0m  73: resource "google_project" "main" [4m{[0m[0m
+  [31m│[0m [0m
+  [31m╵[0m[0m
+  
+  exit status 1
+
+* Failed to execute "terraform apply -auto-approve -input=false" in ./system/project/deploy/.terragrunt-cache/XNnv4flPz0Aq-8Vymmmpid5tQwM/YDEfvRwJmwIVpFBvl0NyRB7KFiQ
+  [31m╷[0m[0m
+  [31m│[0m [0m[1m[31mError: [0m[0m[1mError deleting default network in project hpe-ochamitest-92578414be-9d10: Error waiting for Deleting Firewall: error while retrieving operation: googleapi: Error 403: Compute Engine API has not been used in project hpe-ochamitest-92578414be-9d10 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=hpe-ochamitest-92578414be-9d10 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.
+  [31m│[0m [0mDetails:
+  [31m│[0m [0m[
+  [31m│[0m [0m  {
+  [31m│[0m [0m    "@type": "type.googleapis.com/google.rpc.ErrorInfo",
+  [31m│[0m [0m    "domain": "googleapis.com",
+  [31m│[0m [0m    "metadata": {
+  [31m│[0m [0m      "activationUrl": "https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=hpe-ochamitest-92578414be-9d10",
+  [31m│[0m [0m      "consumer": "projects/hpe-ochamitest-92578414be-9d10",
+  [31m│[0m [0m      "containerInfo": "hpe-ochamitest-92578414be-9d10",
+  [31m│[0m [0m      "service": "compute.googleapis.com",
+  [31m│[0m [0m      "serviceTitle": "Compute Engine API"
+  [31m│[0m [0m    },
+  [31m│[0m [0m    "reason": "SERVICE_DISABLED"
+  [31m│[0m [0m  },
+  [31m│[0m [0m  {
+  [31m│[0m [0m    "@type": "type.googleapis.com/google.rpc.LocalizedMessage",
+  [31m│[0m [0m    "locale": "en-US",
+  [31m│[0m [0m    "message": "Compute Engine API has not been used in project hpe-ochamitest-92578414be-9d10 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=hpe-ochamitest-92578414be-9d10 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry."
+  [31m│[0m [0m  },
+  [31m│[0m [0m  {
+  [31m│[0m [0m    "@type": "type.googleapis.com/google.rpc.Help",
+  [31m│[0m [0m    "links": [
+  [31m│[0m [0m      {
+  [31m│[0m [0m        "description": "Google developers console API activation",
+  [31m│[0m [0m        "url": "https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=hpe-ochamitest-92578414be-9d10"
+  [31m│[0m [0m      }
+  [31m│[0m [0m    ]
+  [31m│[0m [0m  }
+  [31m│[0m [0m]
+  [31m│[0m [0m, accessNotConfigured[0m
+  [31m│[0m [0m
+  [31m│[0m [0m[0m  with module.project-factory.google_project.main,
+  [31m│[0m [0m  on modules/core_project_factory/main.tf line 73, in resource "google_project" "main":
+  [31m│[0m [0m  73: resource "google_project" "main" [4m{[0m[0m
+  [31m│[0m [0m
+  [31m╵[0m[0m
+  
+  exit status 1
+
