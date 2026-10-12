@@ -24,4 +24,11 @@ jobs:
           # Pinned versions prevent surprises.
           version: "565.0.0"
       - name: 'SSH'
-        run: 'gcloud compute ssh testbuilder@openchami-tester-001 --project=hpe-openchami-tester --zone=us-central1-a --command="/usr/bin/bash start_test.sh"'
+        env:
+          # Pass through env rather than interpolating ${{ }} into the script
+          # to avoid shell injection from untrusted input values.
+          OPENCHAMI_VERSION: ${{ inputs.ref }}
+        run: |
+          gcloud compute ssh testbuilder@openchami-tester-001 \
+            --project=hpe-openchami-tester --zone=us-central1-a \
+            --command="OPENCHAMI_VERSION=$(printf '%q' "$OPENCHAMI_VERSION") /usr/bin/bash start_test.sh"
