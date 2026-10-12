@@ -1,0 +1,45 @@
+Importing GPG key 0x350D275D:
+ Userid     : "Rocky Enterprise Software Foundation - Release key 2022 <releng@rockylinux.org>"
+ Fingerprint: 21CB 256A E16F C54C 6E65 2949 702D 426D 350D 275D
+ From       : /etc/pki/rpm-gpg/RPM-GPG-KEY-Rocky-9
+Importing GPG key 0x3228467C:
+ Userid     : "Fedora (epel9) <epel@fedoraproject.org>"
+ Fingerprint: FF8A D134 4597 106E CE81 3B91 8A38 72BF 3228 467C
+ From       : /etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-9
+No packages marked for removal.
+WARNING: Skipping deploy-openchami as it is not installed.
+Cloning into 'deploy-openchami'...
+Already on 'main'
+WARNING: You are using pip version 21.3.1; however, version 26.0.1 is available.
+You should consider upgrading via the '/home/rocky/venv/bin/python3 -m pip install --upgrade pip' command.
+INFO: setup-node: installing required packages
+INFO: setup-node: checking/creating deployment user 'rocky'
+INFO: setup-node: primary group 'rocky' already exists, skipping
+INFO: setup-node: user 'rocky' already exists, skipping
+INFO: setup-node: checking/granting passwordless sudo for 'rocky'
+INFO: setup-node: passwordless sudo entry for 'rocky' already present, skipping
+INFO: setup-s3-and-registry: installing .s3cfg for 'rocky'
+INFO: setup-node: put cluster information in /etc/hosts
+INFO: setup-node: adding head node (10.2.1.2) to /etc/hosts
+INFO: setup-node: turning on IPv4 forwarding
+INFO: setup-node: complete
+INFO: === Phase 2: setup-s3-and-registry ===
+INFO: setup-s3-and-registry: stopping minio.service and removing /data/s3
+INFO: cleaning up service 'minio.service'
+INFO: setup-s3-and-registry: stopping registry.service and removing /data/oci
+INFO: cleaning up service 'registry.service'
+INFO: setup-s3-and-registry: creating directory /data/oci
+INFO: setup-s3-and-registry: creating directory /data/s3
+INFO: setup-s3-and-registry: reloading systemd
+INFO: setup-s3-and-registry: starting minio.service
+Job for minio.service failed because the control process exited with error code.
+See "systemctl status minio.service" and "journalctl -xeu minio.service" for details.
+an error occurred -- here is the status of OpenCHAMI Components:
+openchami.target
+exiting on error [1] from /opt/workdir/deployment-scripts/setup-s3-and-registry.sh:62
+an error occurred -- here is the status of OpenCHAMI Components:
+openchami.target
+exiting on error [1] from /opt/workdir/deployment-scripts/deploy.sh:37
+ERROR: deploy script '/opt/workdir/deployment-scripts/deploy.sh' exited failed to run - Command '['su', '-', 'rocky', '/opt/workdir/deployment-scripts/deploy.sh']' returned non-zero exit status 1.
+exiting on error [1] from /vtds/bin/OpenCHAMI-Deploy.sh:61
+exiting on error [1] from /root/prepare_node.sh:101
