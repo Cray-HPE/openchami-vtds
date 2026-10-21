@@ -400,7 +400,7 @@ provider:
       metadata:
         metadata:
           serial-port-enable: 'true'
-          ssh-keys: 'root:ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDE9Su1hT19b+x8CFqoF8dn2y/1OMA4RTr7l440TsOiVrjENO/dE3x4nza34FE0D6FqKvHB1I32I1UwYoTdNDaXydWT+YLK61ziU1WjgcV3Foe0s7N+k9BrLQAQn0ZhMGpxk+haJTWMlre6LdA7WABknJlpLunOKG5KfF4dvznRDLvj+fXwCI7AXoA00W4YkRpXijnWIkwFPgYC9ItlS7rlZUR/++yPofbdV44jsTsG4Twdrgagx27IDJtIF0UxpqRLpC5gedYkZijbLLb1pe6kmGq1AYblnvA3Qdw6pbbOXoxFERN9FANa1xnjYbjsMPL2QqcSvVhIg1BMSKzzAx8NhG7g0S/IMuqQvmRpy0JHgxYoDJmd2NTs/veEtAIoMw/Nrec2CRhjWCMnNtWHxT8JdNjH2TgLcqSLoHnYbCEdkNjJy47Toeo56jm+L2XLkbnJOxN42JXAm79Vok/d26Ph+1nwuYoxh+glMyXDuxbeFG3kQWiYP2OGXPmAdOMHUgc=
+          ssh-keys: 'root:ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDjFLfBZvbucJ87JA8jh+9H559El+1IrBEg1G+CMygQkTio6n57egeiXUO4tCYybbwl3iHm1KVZB95NQCXf3mmt/lV9drVNIrqAx/+kYuaWn98F0jJcRsUgeoGBGjjJL65zkgktS6c2PssQmTfsFv/OByGo5qE0Ra1Q4IjHlFecDvYBwDPo5iNCG005cbNLjRUF6FxP728/4j0ujbkJ485wxAvN6AoCu8qFUknEbWWk8ugF3dl5prgWFXy4a79czg1U9jvnOxv/rgHhFRCHoqXZRfe6fq3b+LvWNIhEHhGD8PJWF5wYU0+FogMugNGjHZSkSV5zpn2Idrs6tLs6aQYowUYX6bSjCZ15jtDXX5LIFPOrhVFzyH6GEgWjzhNO5LI4vmr4qlJiOGcP1SJZUelX9X2ybumZbPagOAJoPeHsBIB+HSMobBeU28qPD6c84YXQE07zYwcGsWJHFZmMgipkXJ5baQYbfpw7OD/gU7HNC9BV+q1YbIr6Rp4UgYPP/ZU=
             root@2e20da245504
 
             '
@@ -512,7 +512,7 @@ provider:
       metadata:
         metadata:
           serial-port-enable: 'true'
-          ssh-keys: 'root:ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDE9Su1hT19b+x8CFqoF8dn2y/1OMA4RTr7l440TsOiVrjENO/dE3x4nza34FE0D6FqKvHB1I32I1UwYoTdNDaXydWT+YLK61ziU1WjgcV3Foe0s7N+k9BrLQAQn0ZhMGpxk+haJTWMlre6LdA7WABknJlpLunOKG5KfF4dvznRDLvj+fXwCI7AXoA00W4YkRpXijnWIkwFPgYC9ItlS7rlZUR/++yPofbdV44jsTsG4Twdrgagx27IDJtIF0UxpqRLpC5gedYkZijbLLb1pe6kmGq1AYblnvA3Qdw6pbbOXoxFERN9FANa1xnjYbjsMPL2QqcSvVhIg1BMSKzzAx8NhG7g0S/IMuqQvmRpy0JHgxYoDJmd2NTs/veEtAIoMw/Nrec2CRhjWCMnNtWHxT8JdNjH2TgLcqSLoHnYbCEdkNjJy47Toeo56jm+L2XLkbnJOxN42JXAm79Vok/d26Ph+1nwuYoxh+glMyXDuxbeFG3kQWiYP2OGXPmAdOMHUgc=
+          ssh-keys: 'root:ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDjFLfBZvbucJ87JA8jh+9H559El+1IrBEg1G+CMygQkTio6n57egeiXUO4tCYybbwl3iHm1KVZB95NQCXf3mmt/lV9drVNIrqAx/+kYuaWn98F0jJcRsUgeoGBGjjJL65zkgktS6c2PssQmTfsFv/OByGo5qE0Ra1Q4IjHlFecDvYBwDPo5iNCG005cbNLjRUF6FxP728/4j0ujbkJ485wxAvN6AoCu8qFUknEbWWk8ugF3dl5prgWFXy4a79czg1U9jvnOxv/rgHhFRCHoqXZRfe6fq3b+LvWNIhEHhGD8PJWF5wYU0+FogMugNGjHZSkSV5zpn2Idrs6tLs6aQYowUYX6bSjCZ15jtDXX5LIFPOrhVFzyH6GEgWjzhNO5LI4vmr4qlJiOGcP1SJZUelX9X2ybumZbPagOAJoPeHsBIB+HSMobBeU28qPD6c84YXQE07zYwcGsWJHFZmMgipkXJ5baQYbfpw7OD/gU7HNC9BV+q1YbIr6Rp4UgYPP/ZU=
             root@2e20da245504
 
             '
@@ -624,7 +624,7 @@ provider:
       metadata:
         metadata:
           serial-port-enable: 'true'
-          ssh-keys: 'root:ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDE9Su1hT19b+x8CFqoF8dn2y/1OMA4RTr7l440TsOiVrjENO/dE3x4nza34FE0D6FqKvHB1I32I1UwYoTdNDaXydWT+YLK61ziU1WjgcV3Foe0s7N+k9BrLQAQn0ZhMGpxk+haJTWMlre6LdA7WABknJlpLunOKG5KfF4dvznRDLvj+fXwCI7AXoA00W4YkRpXijnWIkwFPgYC9ItlS7rlZUR/++yPofbdV44jsTsG4Twdrgagx27IDJtIF0UxpqRLpC5gedYkZijbLLb1pe6kmGq1AYblnvA3Qdw6pbbOXoxFERN9FANa1xnjYbjsMPL2QqcSvVhIg1BMSKzzAx8NhG7g0S/IMuqQvmRpy0JHgxYoDJmd2NTs/veEtAIoMw/Nrec2CRhjWCMnNtWHxT8JdNjH2TgLcqSLoHnYbCEdkNjJy47Toeo56jm+L2XLkbnJOxN42JXAm79Vok/d26Ph+1nwuYoxh+glMyXDuxbeFG3kQWiYP2OGXPmAdOMHUgc=
+          ssh-keys: 'root:ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDjFLfBZvbucJ87JA8jh+9H559El+1IrBEg1G+CMygQkTio6n57egeiXUO4tCYybbwl3iHm1KVZB95NQCXf3mmt/lV9drVNIrqAx/+kYuaWn98F0jJcRsUgeoGBGjjJL65zkgktS6c2PssQmTfsFv/OByGo5qE0Ra1Q4IjHlFecDvYBwDPo5iNCG005cbNLjRUF6FxP728/4j0ujbkJ485wxAvN6AoCu8qFUknEbWWk8ugF3dl5prgWFXy4a79czg1U9jvnOxv/rgHhFRCHoqXZRfe6fq3b+LvWNIhEHhGD8PJWF5wYU0+FogMugNGjHZSkSV5zpn2Idrs6tLs6aQYowUYX6bSjCZ15jtDXX5LIFPOrhVFzyH6GEgWjzhNO5LI4vmr4qlJiOGcP1SJZUelX9X2ybumZbPagOAJoPeHsBIB+HSMobBeU28qPD6c84YXQE07zYwcGsWJHFZmMgipkXJ5baQYbfpw7OD/gU7HNC9BV+q1YbIr6Rp4UgYPP/ZU=
             root@2e20da245504
 
             '
