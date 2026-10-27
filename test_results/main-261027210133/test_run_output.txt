@@ -1,0 +1,9 @@
+Cloning into '/vtds/openchami-vtds'...
+Switched to a new branch 'test-run/main-261027210133'
+remote: 
+remote: Create a pull request for 'test-run/main-261027210133' on GitHub by visiting:        
+remote:      https://github.com/Cray-HPE/openchami-vtds/pull/new/test-run/main-261027210133        
+remote: 
+To github.com:Cray-HPE/openchami-vtds.git
+ * [new branch]      test-run/main-261027210133 -> test-run/main-261027210133
+branch 'test-run/main-261027210133' set up to track 'origin/test-run/main-261027210133'.
