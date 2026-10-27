@@ -18,7 +18,7 @@ host_blade_network: &id001
     link:
       connected_blades:
       - addresses:
-        - 52:54:00:23:ad:7f
+        - 52:54:00:e4:eb:90
         blade_class: host-blade
       - addresses: []
         blade_class: compute-blade
@@ -64,7 +64,7 @@ networks:
       link:
         connected_blades:
         - addresses:
-          - 52:54:00:63:4b:01
+          - 52:54:00:5c:58:75
           blade_class: host-blade
         family: AF_PACKET
     application_metadata:
@@ -123,22 +123,22 @@ networks:
       link:
         connected_blades:
         - addresses:
-          - 52:54:00:a8:10:a0
-          - 52:54:00:d1:99:fa
-          - 52:54:00:ae:aa:5a
-          - 52:54:00:a2:a4:90
-          - 52:54:00:b8:60:7c
-          - 52:54:00:6f:69:c5
-          - 52:54:00:f6:f3:5e
-          - 52:54:00:2c:fb:a6
-          - 52:54:00:18:82:14
-          - 52:54:00:29:4e:05
-          - 52:54:00:8f:bd:a9
-          - 52:54:00:e2:dc:0f
-          - 52:54:00:5f:e8:4f
-          - 52:54:00:ba:5e:60
-          - 52:54:00:bb:85:df
-          - 52:54:00:23:c4:45
+          - 52:54:00:68:fc:cc
+          - 52:54:00:e1:6a:6a
+          - 52:54:00:d1:49:4d
+          - 52:54:00:c1:6b:c8
+          - 52:54:00:87:af:eb
+          - 52:54:00:0a:44:f2
+          - 52:54:00:c8:63:10
+          - 52:54:00:ee:1a:ef
+          - 52:54:00:b4:d8:b8
+          - 52:54:00:96:a0:16
+          - 52:54:00:43:3d:cf
+          - 52:54:00:01:a4:01
+          - 52:54:00:d3:62:6e
+          - 52:54:00:40:3a:08
+          - 52:54:00:56:51:7a
+          - 52:54:00:f6:be:df
           blade_class: host-blade
         family: AF_PACKET
     blade_interconnect: blade-interconnect
@@ -190,7 +190,7 @@ networks:
       link:
         connected_blades:
         - addresses:
-          - 52:54:00:7a:ae:e6
+          - 52:54:00:d2:ff:4b
           blade_class: host-blade
         family: AF_PACKET
     application_metadata:
@@ -241,10 +241,10 @@ node_classes:
             mode: static
           layer_2:
             addresses:
-            - 52:54:00:01:c8:f0
-            - 52:54:00:df:86:88
-            - 52:54:00:2f:ee:90
-            - 52:54:00:dd:71:7e
+            - 52:54:00:a3:3f:68
+            - 52:54:00:26:60:fd
+            - 52:54:00:5a:75:bf
+            - 52:54:00:14:7c:80
             family: AF_PACKET
         cluster_network: bladenet
         delete: false
@@ -272,10 +272,10 @@ node_classes:
             mode: reserved
           layer_2:
             addresses:
-            - 52:54:00:d4:f5:ac
-            - 52:54:00:da:98:86
-            - 52:54:00:64:ca:17
-            - 52:54:00:e6:8c:2c
+            - 52:54:00:1d:c2:67
+            - 52:54:00:ad:88:c9
+            - 52:54:00:29:b9:16
+            - 52:54:00:ee:33:c9
             family: AF_PACKET
         cluster_network: compnet
     node_count: 4
@@ -391,7 +391,7 @@ node_classes:
             mode: static
           layer_2:
             addresses:
-            - 52:54:00:77:43:f0
+            - 52:54:00:aa:98:7a
             family: AF_PACKET
         cluster_network: bladenet
         delete: false
@@ -411,7 +411,7 @@ node_classes:
             mode: static
           layer_2:
             addresses:
-            - 52:54:00:59:79:7e
+            - 52:54:00:44:dc:16
             family: AF_PACKET
         cluster_network: compnet
       hardware_network:
@@ -430,7 +430,7 @@ node_classes:
             mode: static
           layer_2:
             addresses:
-            - 52:54:00:85:97:09
+            - 52:54:00:00:81:fb
             family: AF_PACKET
         cluster_network: hwmgtnet
       management_network:
@@ -449,7 +449,7 @@ node_classes:
             mode: static
           layer_2:
             addresses:
-            - 52:54:00:72:41:48
+            - 52:54:00:61:31:a6
             family: AF_PACKET
         cluster_network: mgmtnet
     node_count: 1
