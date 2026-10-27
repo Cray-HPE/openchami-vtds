@@ -1,0 +1,2 @@
+tfenv: Switching default version to v1.9.7
+tfenv: Default version (when not overridden by .terraform-version or TFENV_TERRAFORM_VERSION) is now: 1.9.7
