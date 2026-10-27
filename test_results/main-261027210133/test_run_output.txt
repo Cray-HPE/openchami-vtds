@@ -260,3 +260,8 @@ branch 'test-run/main-261027210133' set up to track 'origin/test-run/main-261027
 To github.com:Cray-HPE/openchami-vtds.git
    15d5948..3d6ba14  test-run/main-261027210133 -> test-run/main-261027210133
 branch 'test-run/main-261027210133' set up to track 'origin/test-run/main-261027210133'.
+[test-run/main-261027210133 deb1506] Test run main-261027210133 REMOVED
+ 9 files changed, 224 insertions(+), 48 deletions(-)
+To github.com:Cray-HPE/openchami-vtds.git
+   3d6ba14..deb1506  test-run/main-261027210133 -> test-run/main-261027210133
+branch 'test-run/main-261027210133' set up to track 'origin/test-run/main-261027210133'.
