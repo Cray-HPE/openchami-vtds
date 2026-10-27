@@ -7,3 +7,12 @@ remote:
 To github.com:Cray-HPE/openchami-vtds.git
  * [new branch]      test-run/main-261027210133 -> test-run/main-261027210133
 branch 'test-run/main-261027210133' set up to track 'origin/test-run/main-261027210133'.
+[test-run/main-261027210133 64e3e61] Test run main-261027210133 PENDING
+ 4 files changed, 169 insertions(+)
+ create mode 100644 test_results/main-261027210133/config.yaml
+ create mode 100644 test_results/main-261027210133/deploy_output.txt
+ create mode 100644 test_results/main-261027210133/status
+ create mode 100644 test_results/main-261027210133/test_run_output.txt
+To github.com:Cray-HPE/openchami-vtds.git
+   ea36103..64e3e61  test-run/main-261027210133 -> test-run/main-261027210133
+branch 'test-run/main-261027210133' set up to track 'origin/test-run/main-261027210133'.
