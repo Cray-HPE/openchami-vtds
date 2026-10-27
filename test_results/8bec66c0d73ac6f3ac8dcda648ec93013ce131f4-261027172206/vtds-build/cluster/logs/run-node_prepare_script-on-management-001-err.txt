@@ -1,0 +1,211 @@
+Importing GPG key 0x350D275D:
+ Userid     : "Rocky Enterprise Software Foundation - Release key 2022 <releng@rockylinux.org>"
+ Fingerprint: 21CB 256A E16F C54C 6E65 2949 702D 426D 350D 275D
+ From       : /etc/pki/rpm-gpg/RPM-GPG-KEY-Rocky-9
+Importing GPG key 0x3228467C:
+ Userid     : "Fedora (epel9) <epel@fedoraproject.org>"
+ Fingerprint: FF8A D134 4597 106E CE81 3B91 8A38 72BF 3228 467C
+ From       : /etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-9
+No packages marked for removal.
+WARNING: Skipping deploy-openchami as it is not installed.
+Cloning into 'deploy-openchami'...
+Already on 'main'
+WARNING: You are using pip version 21.3.1; however, version 26.0.1 is available.
+You should consider upgrading via the '/home/rocky/venv/bin/python3 -m pip install --upgrade pip' command.
+INFO: setup-node: installing required packages
+INFO: setup-node: checking/creating deployment user 'rocky'
+INFO: setup-node: primary group 'rocky' already exists, skipping
+INFO: setup-node: user 'rocky' already exists, skipping
+INFO: setup-node: checking/granting passwordless sudo for 'rocky'
+INFO: setup-node: passwordless sudo entry for 'rocky' already present, skipping
+INFO: setup-node: put cluster information in /etc/hosts
+INFO: setup-node: adding head node (10.2.1.2) to /etc/hosts
+INFO: setup-node: turning on IPv4 forwarding
+INFO: setup-node: complete
+cat: /etc/versitygw/secrets.env: No such file or directory
+INFO: === Phase 2: setup-s3-and-registry ===
+INFO: setup-s3-and-registry: stopping versitygw.service and removing /data/s3
+INFO: cleaning up service 'versitygw.service'
+INFO: setup-s3-and-registry: removing versitygw-quadlet package
+No packages marked for removal.
+INFO: setup-s3-and-registry: installing versitygw S3 service as quadlet
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100 13010  100 13010    0     0  50231      0 --:--:-- --:--:-- --:--:-- 50231
+INFO: setup-s3-and-registry: stopping registry.service and removing /data/oci
+INFO: cleaning up service 'registry.service'
+INFO: setup-s3-and-registry: creating directory /data/oci
+INFO: setup-s3-and-registry: reloading systemd
+INFO: setup-s3-and-registry: starting registry.service
+INFO: setup-s3-and-registry: enabling versitygw.service
+Created symlink /etc/systemd/system/multi-user.target.wants/versitygw-gensecrets.service → /etc/systemd/system/versitygw-gensecrets.service.
+INFO: setup-s3-and-registry: starting versitygw.service
+INFO: setup-s3-and-registry: bootstrapping S3 users and buckets
+Created symlink /etc/systemd/system/multi-user.target.wants/versitygw-bootstrap.service → /etc/systemd/system/versitygw-bootstrap.service.
+INFO: setup-s3-and-registry: installing and configuring regctl
+INFO: setup-s3-and-registry: getting S3 Keys and Region
+INFO: setup-s3-and-registry: configuring S3 AWS keys and region
+INFO: setup-s3-and-registry: creating and configuring S3 buckets
+INFO: setup-s3-and-registry: complete
+INFO: === Phase 3: prepare-openchami ===
+INFO: prepare-openchami: removing any existing 'ochami' installation
+No packages marked for removal.
+INFO: prepare-openchami: installing 'ochami'
+INFO: prepare-openchami: downloading ochami RPM version 'latest'
+INFO: prepare-openchami: installing ochami RPM
+INFO: prepare-openchami: removing any existing 'openchami' package
+No packages marked for removal.
+INFO: prepare-openchami: removing old openchami-release repo (if any)
+INFO: prepare-openchami: cloning openchami-release: https://github.com/OpenCHAMI/release.git
+Cloning into '/opt/workdir/openchami_release'...
+INFO: prepare-openchami: checking out version '8bec66c0d73ac6f3ac8dcda648ec93013ce131f4'
+Note: switching to '8bec66c0d73ac6f3ac8dcda648ec93013ce131f4'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at 8bec66c Add renovate.json
+INFO: prepare-openchami: building OpenCHAMI Release RPM
++ umask 022
++ cd /home/rocky/rpmbuild/BUILD
++ cd /home/rocky/rpmbuild/BUILD
++ rm -rf openchami-0.1.6
++ /usr/bin/gzip -dc /home/rocky/rpmbuild/SOURCES/openchami-0.1.6.tar.gz
++ /usr/bin/tar -xof -
++ STATUS=0
++ '[' 0 -ne 0 ']'
++ cd openchami-0.1.6
++ /usr/bin/chmod -Rf a+rX,u+w,g-w,o-w .
++ RPM_EC=0
+++ jobs -p
++ exit 0
++ umask 022
++ cd /home/rocky/rpmbuild/BUILD
++ cd openchami-0.1.6
++ RPM_EC=0
+++ jobs -p
++ exit 0
++ umask 022
++ cd /home/rocky/rpmbuild/BUILD
++ '[' /home/rocky/rpmbuild/BUILDROOT/openchami-0.1.6-1.x86_64 '!=' / ']'
++ rm -rf /home/rocky/rpmbuild/BUILDROOT/openchami-0.1.6-1.x86_64
+++ dirname /home/rocky/rpmbuild/BUILDROOT/openchami-0.1.6-1.x86_64
++ mkdir -p /home/rocky/rpmbuild/BUILDROOT
++ mkdir /home/rocky/rpmbuild/BUILDROOT/openchami-0.1.6-1.x86_64
++ cd openchami-0.1.6
++ mkdir -p /home/rocky/rpmbuild/BUILDROOT/openchami-0.1.6-1.x86_64/etc/openchami/configs /home/rocky/rpmbuild/BUILDROOT/openchami-0.1.6-1.x86_64/etc/openchami/pg-init /home/rocky/rpmbuild/BUILDROOT/openchami-0.1.6-1.x86_64/etc/containers/systemd /home/rocky/rpmbuild/BUILDROOT/openchami-0.1.6-1.x86_64/etc/systemd/system /home/rocky/rpmbuild/BUILDROOT/openchami-0.1.6-1.x86_64/usr/bin /home/rocky/rpmbuild/BUILDROOT/openchami-0.1.6-1.x86_64/etc/profile.d /home/rocky/rpmbuild/BUILDROOT/openchami-0.1.6-1.x86_64/usr/libexec/openchami
++ cp -r systemd/configs/Corefile systemd/configs/configurator.yaml systemd/configs/coredhcp.yaml systemd/configs/haproxy.cfg systemd/configs/hydra.yml systemd/configs/opaal.yaml systemd/configs/openchami.env /home/rocky/rpmbuild/BUILDROOT/openchami-0.1.6-1.x86_64/etc/openchami/configs/
++ cp -r systemd/containers/acme-deploy.container systemd/containers/acme-register.container systemd/containers/bss-init.container systemd/containers/bss.container systemd/containers/cloud-init-server.container systemd/containers/coresmd-coredhcp.container systemd/containers/coresmd-coredns.container systemd/containers/haproxy.container systemd/containers/hydra-gen-jwks.container systemd/containers/hydra-migrate.container systemd/containers/hydra.container systemd/containers/opaal-idp.container systemd/containers/opaal.container systemd/containers/postgres.container systemd/containers/smd-init.container systemd/containers/smd.container systemd/containers/step-ca.container /home/rocky/rpmbuild/BUILDROOT/openchami-0.1.6-1.x86_64/etc/containers/systemd/
++ cp -r systemd/volumes/acme-certs.volume systemd/volumes/cloud-init-data.volume systemd/volumes/haproxy-certs.volume systemd/volumes/postgres-data.volume systemd/volumes/step-ca-db.volume systemd/volumes/step-ca-home.volume systemd/volumes/step-root-ca.volume /home/rocky/rpmbuild/BUILDROOT/openchami-0.1.6-1.x86_64/etc/containers/systemd/
++ cp -r systemd/networks/openchami-cert-internal.network systemd/networks/openchami-external.network systemd/networks/openchami-internal.network systemd/networks/openchami-jwt-internal.network /home/rocky/rpmbuild/BUILDROOT/openchami-0.1.6-1.x86_64/etc/containers/systemd/
++ cp -r systemd/targets/openchami.target /home/rocky/rpmbuild/BUILDROOT/openchami-0.1.6-1.x86_64/etc/systemd/system/
++ cp -r systemd/system/openchami-cert-renewal.service systemd/system/openchami-cert-renewal.timer systemd/system/openchami-cert-trust.service /home/rocky/rpmbuild/BUILDROOT/openchami-0.1.6-1.x86_64/etc/systemd/system/
++ cp scripts/bootstrap_openchami.sh /home/rocky/rpmbuild/BUILDROOT/openchami-0.1.6-1.x86_64/usr/libexec/openchami/
++ cp scripts/openchami-certificate-update /home/rocky/rpmbuild/BUILDROOT/openchami-0.1.6-1.x86_64/usr/bin/
++ cp scripts/openchami_profile.sh /home/rocky/rpmbuild/BUILDROOT/openchami-0.1.6-1.x86_64/etc/profile.d/openchami.sh
++ cp scripts/multi-psql-db.sh /home/rocky/rpmbuild/BUILDROOT/openchami-0.1.6-1.x86_64/etc/openchami/pg-init/multi-psql-db.sh
++ cp scripts/ohpc-nodes.sh /home/rocky/rpmbuild/BUILDROOT/openchami-0.1.6-1.x86_64/usr/libexec/openchami/
++ chmod +x /home/rocky/rpmbuild/BUILDROOT/openchami-0.1.6-1.x86_64/usr/libexec/openchami/bootstrap_openchami.sh
++ chmod +x /home/rocky/rpmbuild/BUILDROOT/openchami-0.1.6-1.x86_64/usr/libexec/openchami/ohpc-nodes.sh
++ chmod +x /home/rocky/rpmbuild/BUILDROOT/openchami-0.1.6-1.x86_64/usr/libexec/openchami/bootstrap_openchami.sh
++ chmod +x /home/rocky/rpmbuild/BUILDROOT/openchami-0.1.6-1.x86_64/usr/bin/openchami-certificate-update
++ chmod +x /home/rocky/rpmbuild/BUILDROOT/openchami-0.1.6-1.x86_64/usr/libexec/openchami/ohpc-nodes.sh
++ chmod 600 /home/rocky/rpmbuild/BUILDROOT/openchami-0.1.6-1.x86_64/etc/openchami/configs/openchami.env
++ chmod 644 /home/rocky/rpmbuild/BUILDROOT/openchami-0.1.6-1.x86_64/etc/openchami/configs/Corefile /home/rocky/rpmbuild/BUILDROOT/openchami-0.1.6-1.x86_64/etc/openchami/configs/configurator.yaml /home/rocky/rpmbuild/BUILDROOT/openchami-0.1.6-1.x86_64/etc/openchami/configs/coredhcp.yaml /home/rocky/rpmbuild/BUILDROOT/openchami-0.1.6-1.x86_64/etc/openchami/configs/haproxy.cfg /home/rocky/rpmbuild/BUILDROOT/openchami-0.1.6-1.x86_64/etc/openchami/configs/hydra.yml /home/rocky/rpmbuild/BUILDROOT/openchami-0.1.6-1.x86_64/etc/openchami/configs/opaal.yaml /home/rocky/rpmbuild/BUILDROOT/openchami-0.1.6-1.x86_64/etc/openchami/configs/openchami.env
++ /usr/bin/find-debuginfo -j4 --strict-build-id -m -i --build-id-seed 0.1.6-1 --unique-debug-suffix -0.1.6-1.x86_64 --unique-debug-src-base openchami-0.1.6-1.x86_64 --run-dwz --dwz-low-mem-die-limit 10000000 --dwz-max-die-limit 110000000 --remove-section .gnu.build.attributes -S debugsourcefiles.list /home/rocky/rpmbuild/BUILD/openchami-0.1.6
++ '[' '%{buildarch}' = noarch ']'
++ QA_CHECK_RPATHS=1
++ case "${QA_CHECK_RPATHS:-}" in
++ /usr/lib/rpm/check-rpaths
++ /usr/lib/rpm/check-buildroot
++ /usr/lib/rpm/redhat/brp-ldconfig
++ /usr/lib/rpm/brp-compress
++ /usr/lib/rpm/redhat/brp-strip-lto /usr/bin/strip
++ /usr/lib/rpm/brp-strip-static-archive /usr/bin/strip
++ /usr/lib/rpm/redhat/brp-python-bytecompile '' 1 0
++ /usr/lib/rpm/brp-python-hardlink
++ /usr/lib/rpm/redhat/brp-mangle-shebangs
++ umask 022
++ cd /home/rocky/rpmbuild/BUILD
++ cd openchami-0.1.6
++ LICENSEDIR=/home/rocky/rpmbuild/BUILDROOT/openchami-0.1.6-1.x86_64/usr/share/licenses/openchami
++ export LC_ALL=C
++ LC_ALL=C
++ export LICENSEDIR
++ /usr/bin/mkdir -p /home/rocky/rpmbuild/BUILDROOT/openchami-0.1.6-1.x86_64/usr/share/licenses/openchami
++ cp -pr LICENSE /home/rocky/rpmbuild/BUILDROOT/openchami-0.1.6-1.x86_64/usr/share/licenses/openchami
++ RPM_EC=0
+++ jobs -p
++ exit 0
++ umask 022
++ cd /home/rocky/rpmbuild/BUILD
++ cd openchami-0.1.6
++ /usr/bin/rm -rf /home/rocky/rpmbuild/BUILDROOT/openchami-0.1.6-1.x86_64
++ RPM_EC=0
+++ jobs -p
++ exit 0
+INFO: prepare-openchami: complete (RPM built in /opt/workdir/openchami_release)
+INFO: === Phase 4: install-openchami ===
+INFO: install-openchami: locating OpenCHAMI Release RPM
+INFO: install-openchami: installing /opt/workdir/openchami_release/openchami-0.1.6-1.noarch.rpm
+INFO: install-openchami: merging /etc/openchami/configs/openchami.env
+INFO: install-openchami: complete
+INFO: === Phase 5: start-openchami ===
+INFO: start-openchami: shutting down any existing OpenCHAMI instance
+INFO: start-openchami: replacing system files with generated versions
+INFO: start-openchami: setting up cluster SSL certs for OpenCHAMI
+INFO: start-openchami: set management net IF in 'coredhcp.yaml'
+INFO: start-openchami: starting openchami.target
+INFO: start-openchami: configuring ochami CLI client
+/etc/ochami/config.yaml does not exist. Create it? [yn]:INFO: start-openchami: waiting for an ochami access token
+INFO: start-openchami: waiting for SMD to become available
+INFO: waiting for SMD (up to 100 more seconds)
+INFO: waiting for SMD (up to 90 more seconds)
+INFO: waiting for SMD (up to 80 more seconds)
+INFO: waiting for SMD (up to 70 more seconds)
+INFO: waiting for SMD (up to 60 more seconds)
+INFO: waiting for SMD (up to 50 more seconds)
+INFO: waiting for SMD (up to 40 more seconds)
+INFO: waiting for SMD (up to 30 more seconds)
+INFO: waiting for SMD (up to 20 more seconds)
+INFO: waiting for SMD (up to 10 more seconds)
+/opt/workdir/deployment-scripts/start-openchami.sh:103:[main]: timeout waiting for SMD to start; OpenCHAMI is not fully available
+an error occurred -- here is the status of OpenCHAMI Components:
+openchami.target
+○ ├─acme-deploy.service
+○ ├─acme-register.service
+● ├─bss-init.service
+× ├─bss.service
+× ├─cloud-init-server.service
+○ ├─coresmd-coredhcp.service
+○ ├─coresmd-coredns.service
+○ ├─haproxy.service
+○ ├─hydra-gen-jwks.service
+● ├─hydra-migrate.service
+○ ├─hydra.service
+× ├─opaal-idp.service
+× ├─opaal.service
+○ ├─openchami-cert-trust.service
+● ├─postgres.service
+● ├─smd-init.service
+× ├─smd.service
+● ├─step-ca.service
+● └─network-online.target
+●   └─NetworkManager-wait-online.service
+exiting on error [1] from /opt/workdir/deployment-scripts/deploy.sh:43
+ERROR: deploy script '/opt/workdir/deployment-scripts/deploy.sh' exited failed to run - Command '['su', '-', 'rocky', '/opt/workdir/deployment-scripts/deploy.sh']' returned non-zero exit status 1.
+exiting on error [1] from /vtds/bin/OpenCHAMI-Deploy.sh:61
+exiting on error [1] from /root/prepare_node.sh:101
