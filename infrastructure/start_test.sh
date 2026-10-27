@@ -48,9 +48,10 @@ git clone "${TEST_REPO_URL}" "${TEST_REPO_TREE}"
 # Build the Podman container image and start the tests in it
 cd "${INFRASTRUCTURE_PATH}"
 
-# First clean up any images that have not been used in the past 24
-# hours so we keep things resonably tidy
-podman images prune -a --filter "until=24h"
+# First clean up any containers and images that have not
+# been used in the past week so we keep things resonably tidy
+podman container prune -f --filter "until=168h" || :
+podman image prune -a -f --filter "until=168h" || :
 
 # Now create our image
 podman build -t "openchami-tester:${CONTAINER_IMAGE_TAG}" .

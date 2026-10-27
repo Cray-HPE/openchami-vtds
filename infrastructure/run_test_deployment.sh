@@ -53,6 +53,18 @@ function update_status() {
     git push --set-upstream origin 
 }
 
+# Handle exits, especially error exits and update github before exiting
+# if possible.
+function exit_handler() {
+    local exit_status="$?"
+    [[ "${exit_status}" == 0 ]] && exit 0
+    git status > /dev/null 2>&1 || exit 128
+    update_status "TEST_RUN_BROKE" "Test run ${TEST_RUN_NAME} broke"
+    exit "${exit_status}"
+}
+trap exit_handler EXIT
+
+
 # Runs a command in the background, monitoring its progress, updating
 # GitHub and handling timeouts as needed.
 function run_monitored() {
@@ -159,9 +171,15 @@ cp "${TEST_REPO_TREE}/infrastructure/${VTDS_CONFIG_TEMPLATE}" \
 cd "${TEST_DIR_PATH}"
 touch "${TEST_DIR_PATH}/status"
 touch "${TEST_DIR_PATH}/deploy_output.txt"
+# Move (do not copy) the file that is capturing the output from
+# this test run into the test results directory and add it to the
+# repository as 'test_run_output.txt'. That way, the output should
+# continue to accumulate there as long as this script is running.
+mv /vtds/test_run_output.txt "${TEST_DIR_PATH}/test_run_output.txt"
 git add status
 git add deploy_output.txt
 git add config.yaml
+git add test_run_output.txt
 update_status "PENDING" "Test run ${TEST_RUN_NAME} PENDING"
 
 # Configure the deployment
