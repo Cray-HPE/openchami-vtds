@@ -51,3 +51,8 @@ branch 'test-run/main-261028141727' set up to track 'origin/test-run/main-261028
 To github.com:Cray-HPE/openchami-vtds.git
    48b1b1e..a2c5851  test-run/main-261028141727 -> test-run/main-261028141727
 branch 'test-run/main-261028141727' set up to track 'origin/test-run/main-261028141727'.
+[test-run/main-261028141727 9f27040] Test run main-261028141727 DEPLOYING [7]
+ 2 files changed, 6 insertions(+)
+To github.com:Cray-HPE/openchami-vtds.git
+   a2c5851..9f27040  test-run/main-261028141727 -> test-run/main-261028141727
+branch 'test-run/main-261028141727' set up to track 'origin/test-run/main-261028141727'.
