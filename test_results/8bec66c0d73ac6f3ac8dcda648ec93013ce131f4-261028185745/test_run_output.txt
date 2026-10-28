@@ -31,3 +31,14 @@ branch 'test-run/8bec66c0d73ac6f3ac8dcda648ec93013ce131f4-261028185745' set up t
 To github.com:Cray-HPE/openchami-vtds.git
    e650d66..e4de0d7  test-run/8bec66c0d73ac6f3ac8dcda648ec93013ce131f4-261028185745 -> test-run/8bec66c0d73ac6f3ac8dcda648ec93013ce131f4-261028185745
 branch 'test-run/8bec66c0d73ac6f3ac8dcda648ec93013ce131f4-261028185745' set up to track 'origin/test-run/8bec66c0d73ac6f3ac8dcda648ec93013ce131f4-261028185745'.
+[test-run/8bec66c0d73ac6f3ac8dcda648ec93013ce131f4-261028185745 7139d8b] Test run 8bec66c0d73ac6f3ac8dcda648ec93013ce131f4-261028185745 REMOVING [1]
+ 8 files changed, 20 insertions(+)
+ create mode 100644 test_results/8bec66c0d73ac6f3ac8dcda648ec93013ce131f4-261028185745/vtds-build/provider/logs/init-terraform-version-manager-err.txt
+ create mode 100644 test_results/8bec66c0d73ac6f3ac8dcda648ec93013ce131f4-261028185745/vtds-build/provider/logs/init-terraform-version-manager-out.txt
+ create mode 100644 test_results/8bec66c0d73ac6f3ac8dcda648ec93013ce131f4-261028185745/vtds-build/provider/logs/install-terraform-version-1.9.7-err.txt
+ create mode 100644 test_results/8bec66c0d73ac6f3ac8dcda648ec93013ce131f4-261028185745/vtds-build/provider/logs/install-terraform-version-1.9.7-out.txt
+ create mode 100644 test_results/8bec66c0d73ac6f3ac8dcda648ec93013ce131f4-261028185745/vtds-build/provider/logs/prime-terraform-version-manager-err.txt
+ create mode 100644 test_results/8bec66c0d73ac6f3ac8dcda648ec93013ce131f4-261028185745/vtds-build/provider/logs/prime-terraform-version-manager-out.txt
+To github.com:Cray-HPE/openchami-vtds.git
+   e4de0d7..7139d8b  test-run/8bec66c0d73ac6f3ac8dcda648ec93013ce131f4-261028185745 -> test-run/8bec66c0d73ac6f3ac8dcda648ec93013ce131f4-261028185745
+branch 'test-run/8bec66c0d73ac6f3ac8dcda648ec93013ce131f4-261028185745' set up to track 'origin/test-run/8bec66c0d73ac6f3ac8dcda648ec93013ce131f4-261028185745'.
