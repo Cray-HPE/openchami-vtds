@@ -32,4 +32,4 @@ RUN echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] https://packages.
 
 COPY run_test_deployment.sh /vtds/run_test_deployment.sh
 
-ENTRYPOINT ["/vtds/run_test_deployment.sh"]
+ENTRYPOINT ["/bin/bash", "-c", "/vtds/run_test_deployment.sh > /vtds/test_run_output.txt 2>&1"]
