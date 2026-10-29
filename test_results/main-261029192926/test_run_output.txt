@@ -18,3 +18,11 @@ To github.com:Cray-HPE/openchami-vtds.git
 branch 'test-run/main-261029192926' set up to track 'origin/test-run/main-261029192926'.
 [test-run/main-261029192926 d9fe05a] Test run main-261029192926 configured
  2 files changed, 11 insertions(+), 2 deletions(-)
+[test-run/main-261029192926 98d68c8] Test run main-261029192926 DEPLOYING [1]
+ 5 files changed, 1358 insertions(+)
+ create mode 100644 test_results/main-261029192926/full_config.yaml
+ create mode 100644 test_results/main-261029192926/vtds-build/provider/logs/common-get-project-id-err.txt
+ create mode 100644 test_results/main-261029192926/vtds-build/provider/logs/common-get-project-id-out.txt
+To github.com:Cray-HPE/openchami-vtds.git
+   84bfdde..98d68c8  test-run/main-261029192926 -> test-run/main-261029192926
+branch 'test-run/main-261029192926' set up to track 'origin/test-run/main-261029192926'.
