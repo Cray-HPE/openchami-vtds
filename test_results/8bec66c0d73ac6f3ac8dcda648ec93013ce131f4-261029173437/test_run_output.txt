@@ -7,3 +7,12 @@ remote:
 To github.com:Cray-HPE/openchami-vtds.git
  * [new branch]      test-run/8bec66c0d73ac6f3ac8dcda648ec93013ce131f4-261029173437 -> test-run/8bec66c0d73ac6f3ac8dcda648ec93013ce131f4-261029173437
 branch 'test-run/8bec66c0d73ac6f3ac8dcda648ec93013ce131f4-261029173437' set up to track 'origin/test-run/8bec66c0d73ac6f3ac8dcda648ec93013ce131f4-261029173437'.
+[test-run/8bec66c0d73ac6f3ac8dcda648ec93013ce131f4-261029173437 b366071] Test run 8bec66c0d73ac6f3ac8dcda648ec93013ce131f4-261029173437 PENDING
+ 4 files changed, 169 insertions(+)
+ create mode 100644 test_results/8bec66c0d73ac6f3ac8dcda648ec93013ce131f4-261029173437/config.yaml
+ create mode 100644 test_results/8bec66c0d73ac6f3ac8dcda648ec93013ce131f4-261029173437/deploy_output.txt
+ create mode 100644 test_results/8bec66c0d73ac6f3ac8dcda648ec93013ce131f4-261029173437/status
+ create mode 100644 test_results/8bec66c0d73ac6f3ac8dcda648ec93013ce131f4-261029173437/test_run_output.txt
+To github.com:Cray-HPE/openchami-vtds.git
+   71f48c5..b366071  test-run/8bec66c0d73ac6f3ac8dcda648ec93013ce131f4-261029173437 -> test-run/8bec66c0d73ac6f3ac8dcda648ec93013ce131f4-261029173437
+branch 'test-run/8bec66c0d73ac6f3ac8dcda648ec93013ce131f4-261029173437' set up to track 'origin/test-run/8bec66c0d73ac6f3ac8dcda648ec93013ce131f4-261029173437'.
