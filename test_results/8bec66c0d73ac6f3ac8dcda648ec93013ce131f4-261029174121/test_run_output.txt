@@ -16,3 +16,5 @@ branch 'test-run/8bec66c0d73ac6f3ac8dcda648ec93013ce131f4-261029174121' set up t
 To github.com:Cray-HPE/openchami-vtds.git
    71f48c5..90728bc  test-run/8bec66c0d73ac6f3ac8dcda648ec93013ce131f4-261029174121 -> test-run/8bec66c0d73ac6f3ac8dcda648ec93013ce131f4-261029174121
 branch 'test-run/8bec66c0d73ac6f3ac8dcda648ec93013ce131f4-261029174121' set up to track 'origin/test-run/8bec66c0d73ac6f3ac8dcda648ec93013ce131f4-261029174121'.
+[test-run/8bec66c0d73ac6f3ac8dcda648ec93013ce131f4-261029174121 037e5a0] Test run 8bec66c0d73ac6f3ac8dcda648ec93013ce131f4-261029174121 configured
+ 2 files changed, 11 insertions(+), 2 deletions(-)
