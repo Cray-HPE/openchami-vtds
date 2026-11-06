@@ -18,3 +18,11 @@ To github.com:Cray-HPE/openchami-vtds.git
 branch 'test-run/722976ccb354550eddf8b8a04865c9446cf05447-261106210001' set up to track 'origin/test-run/722976ccb354550eddf8b8a04865c9446cf05447-261106210001'.
 [test-run/722976ccb354550eddf8b8a04865c9446cf05447-261106210001 f4173d8] Test run 722976ccb354550eddf8b8a04865c9446cf05447-261106210001 configured
  2 files changed, 11 insertions(+), 2 deletions(-)
+[test-run/722976ccb354550eddf8b8a04865c9446cf05447-261106210001 9e863f0] Test run 722976ccb354550eddf8b8a04865c9446cf05447-261106210001 DEPLOYING [1]
+ 5 files changed, 1358 insertions(+)
+ create mode 100644 test_results/722976ccb354550eddf8b8a04865c9446cf05447-261106210001/full_config.yaml
+ create mode 100644 test_results/722976ccb354550eddf8b8a04865c9446cf05447-261106210001/vtds-build/provider/logs/common-get-project-id-err.txt
+ create mode 100644 test_results/722976ccb354550eddf8b8a04865c9446cf05447-261106210001/vtds-build/provider/logs/common-get-project-id-out.txt
+To github.com:Cray-HPE/openchami-vtds.git
+   2aa590a..9e863f0  test-run/722976ccb354550eddf8b8a04865c9446cf05447-261106210001 -> test-run/722976ccb354550eddf8b8a04865c9446cf05447-261106210001
+branch 'test-run/722976ccb354550eddf8b8a04865c9446cf05447-261106210001' set up to track 'origin/test-run/722976ccb354550eddf8b8a04865c9446cf05447-261106210001'.
