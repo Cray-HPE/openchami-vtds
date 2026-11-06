@@ -1,0 +1,9 @@
+Cloning into '/vtds/openchami-vtds'...
+Switched to a new branch 'test-run/722976ccb354550eddf8b8a04865c9446cf05447-261106220438'
+remote: 
+remote: Create a pull request for 'test-run/722976ccb354550eddf8b8a04865c9446cf05447-261106220438' on GitHub by visiting:        
+remote:      https://github.com/Cray-HPE/openchami-vtds/pull/new/test-run/722976ccb354550eddf8b8a04865c9446cf05447-261106220438        
+remote: 
+To github.com:Cray-HPE/openchami-vtds.git
+ * [new branch]      test-run/722976ccb354550eddf8b8a04865c9446cf05447-261106220438 -> test-run/722976ccb354550eddf8b8a04865c9446cf05447-261106220438
+branch 'test-run/722976ccb354550eddf8b8a04865c9446cf05447-261106220438' set up to track 'origin/test-run/722976ccb354550eddf8b8a04865c9446cf05447-261106220438'.
