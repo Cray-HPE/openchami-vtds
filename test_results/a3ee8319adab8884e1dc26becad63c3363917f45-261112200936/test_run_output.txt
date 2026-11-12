@@ -26,3 +26,8 @@ branch 'test-run/a3ee8319adab8884e1dc26becad63c3363917f45-261112200936' set up t
 To github.com:Cray-HPE/openchami-vtds.git
    e945759..958812c  test-run/a3ee8319adab8884e1dc26becad63c3363917f45-261112200936 -> test-run/a3ee8319adab8884e1dc26becad63c3363917f45-261112200936
 branch 'test-run/a3ee8319adab8884e1dc26becad63c3363917f45-261112200936' set up to track 'origin/test-run/a3ee8319adab8884e1dc26becad63c3363917f45-261112200936'.
+[test-run/a3ee8319adab8884e1dc26becad63c3363917f45-261112200936 00359c6] Test run a3ee8319adab8884e1dc26becad63c3363917f45-261112200936 DEPLOYING [2]
+ 3 files changed, 18 insertions(+)
+To github.com:Cray-HPE/openchami-vtds.git
+   958812c..00359c6  test-run/a3ee8319adab8884e1dc26becad63c3363917f45-261112200936 -> test-run/a3ee8319adab8884e1dc26becad63c3363917f45-261112200936
+branch 'test-run/a3ee8319adab8884e1dc26becad63c3363917f45-261112200936' set up to track 'origin/test-run/a3ee8319adab8884e1dc26becad63c3363917f45-261112200936'.
