@@ -1,0 +1,10 @@
+tfenv: Installing Terraform v1.17.2
+tfenv: Downloading release tarball from https://releases.hashicorp.com/terraform/1.17.2/terraform_1.17.2_linux_amd64.zip
+                                                                           0.4%################                                                          23.0%##############################################                            64.0%######################################################################## 100.0%
+tfenv: Downloading SHA hash file from https://releases.hashicorp.com/terraform/1.17.2/terraform_1.17.2_SHA256SUMS
+tfenv: Not instructed to use Local PGP (/root/.tfenv/use-{gpgv,gnupg}) & No keybase install found, skipping OpenPGP signature verification
+tfenv: SHA256 hash matched!
+tfenv: Archive:  /tmp/tfenv_download.I1tD9A/terraform_1.17.2_linux_amd64.zip
+tfenv:   inflating: /root/.tfenv/versions/1.17.2/LICENSE.txt  
+tfenv:   inflating: /root/.tfenv/versions/1.17.2/terraform  
+tfenv: Installation of terraform v1.17.2 successful. To make this your default version, run 'tfenv use 1.17.2'
